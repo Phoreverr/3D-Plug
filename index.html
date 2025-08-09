@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <title>3D plug</title>
+
+</head>
+
+<body style="font-family: 'Inter', sans-serif;" class="text-black">
+
+    <!-- NAVBAR -->
+    <nav class="!bg-[#fff] fixed top-0 w-full z-50">
+        <div class="max-w-[1250px] mx-auto">
+            <div class="flex justify-between items-center px-[20px] py-[20px]">
+                <div class="flex text-[15.75px] font-extrabold leading-[17.6px]">
+
+                    <a href="#" class="flex gap-0 items-center">
+                        <img src="./3d-icons/3DPlug-logo.png" alt="GCS Logo" class="!h-[70px]">
+                    </a>
+                </div>
+
+                <div class="hamburger cursor-pointer lg:hidden" id="hamburger">
+                    <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none"
+                        viewBox="0 0 24 24" stroke="black">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                    <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 hidden" fill="none"
+                        viewBox="0 0 24 24" stroke="black">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </div>
+
+                <div class="menu hidden lg:flex gap-[59px] font-medium text-black ml-30">
+                    <a href="#home">Home</a>
+                    <a href="#about-us">About Us</a>
+                    <a href="#services">Services</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="hidden lg:flex gap-[10px]">
+                    <a href="#" class="register-link" target="_blank">
+                        <button
+                            class="hidden lg:flex !bg-[#D20F4B] !border-[#D20F4B] border-2 font-bold !text-[#fff] !px-[28px] !py-[12px] rounded-md">Get
+                            Started</button>
+                    </a>
+                </div>
+
+                <div
+                    class="dropdown-menu hidden flex-col absolute top-[70px] pl-[20px] left-0 bg-white shadow-lg w-full z-10 !bg-[#fff] text-black">
+                    <a href="#home" class="px-4 py-2 hover:bg-gray-200">Home</a>
+                    <a href="#about-us" class="px-4 py-2 hover:bg-gray-200">About Us</a>
+                    <a href="#services" class="px-4 py-2 hover:bg-gray-200">Services</a>
+                    <a href="#faq" class="px-4 py-2 hover:bg-gray-200">FAQ</a>
+                    <a href="#contact" class="px-4 py-2 hover:bg-gray-200">Contact</a>
+
+                    <div class="flex font-medium p-3 flex-row gap-1 items-center">
+                        <a href="#" class="register-link" target="_blank">
+                            <button
+                                class=" !bg-[#D20F4B] !border-[#D20F4B] border-2 font-bold !text-[#fff] !px-[28px] !py-[15px] rounded-md">Get
+                                Started</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <div class="!bg-[#fff] !text-black mt-[100px]">
+        <div class="grid grid-cols-2 max-w-7xl mx-auto !h-[85%]">
+            <div>
+                <h1
+                    class="text-left leading-[70px] !text-[72px] font-bold tracking-[-2px] !mb-[20px] md:!mb-[40px] !mt-[20px] md:!mt-[30px]">
+                    We are at the forefront of innovation in additive manufacturing.</h1>
+                <p
+                    class="!text-[24px] !text-black !mb-[48px] md:w-[80%] w-[90%] text-left !text-[20px] font-normal leading-[30.6px] tracking-[-0.4px]">
+                    We deliver precise 3D printing and scanning services that empower innovation across design,
+                    engineering, manufacturing, healthcare and more.
+                </p>
+            </div>
+            <div>
+                <div id="image-slider" class="flex justify-center items-center">
+                    <img id="slide-img" src="./3d-images/leg-2.png" alt="slide" class="!w-full !h-full transition-opacity duration-1000 opacity-100">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- TRUSTED BY WORLD LEADING-BUSINESS -->
+    <div class="bg-white" id="features">
+        <section class="max-w-8xl mx-auto !pt-[45px] md:!pt-[96px] px-6 text-center">
+            <h2
+                class="text-black text-center text-[11.625px] font-medium tracking-[0.72px] uppercase mb-10 md:mb-[30px]">
+                Trusted by world-leading businesses
+            </h2>
+            <div class="slideshow-container">
+                <div class="flex flex-wrap gap-[20px] md:gap-[40px] mb-[30px] md:mb-[110px] slideshow">
+                    <img src="./3d-icons/aella.svg" alt="brand-logo">
+                    <img src="./3d-icons/codematic.png" alt="brand-logo">
+
+
+                    <!-- Duplicate images for seamless looping -->
+                    <img src="./3d-icons/aella.svg" alt="brand-logo">
+                    <img src="./3d-icons/codematic.png" alt="brand-logo">
+
+                    <!-- Duplicate images for seamless looping -->
+                    <img src="./3d-icons/aella.svg" alt="brand-logo">
+                    <img src="./3d-icons/codematic.png" alt="brand-logo">
+
+                    <!-- Duplicate images for seamless looping -->
+                    <img src="./3d-icons/aella.svg" alt="brand-logo">
+                    <img src="./3d-icons/codematic.png" alt="brand-logo">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- DATA DRIVEN -->
+        <section class="max-w-7xl mx-auto px-8 text-center md:text-left pt-16 md:pt-0">
+            <div class="mx-auto pt-0 pb-16 grid md:grid-cols-2 gap-[32px] md:gap-0 items-center justify-center">
+                <div class="grid">
+                    <h3
+                        class="text-[#131110] mx-auto md:mx-0 w-[100%] !text-[40px] font-medium leading-[42px] tracking-[-2px] !mb-[20px] md:w-[75%]">
+                        Data-driven Insights to Improve Marketing ROI</h3>
+                    <p
+                        class="text-[#131110] text-[17px] font-normal leading-[30.6px] tracking-[-0.4px] mx-auto md:!m-0 w-[100%] md:w-[70%]">
+                        Genesis integrates customer data from multiple sources, using AI-powered segmentation to deliver
+                        personalized campaigns, guide customer journeys, and re-engage inactive users.
+                    </p>
+                    <a href="#" class="register-link" target="_blank">
+                        <button
+                            class="bg-transparent font-bold flex w-fit mx-auto md:mx-0 !mt-[18px] text-black !px-[16px] !py-[10px] rounded-md border-2 border-black border-solid text-left cursor-pointer">Explore
+                            Genesis platform</button>
+                    </a>
+
+                </div>
+
+                <div class="flex flex-col gap-[32px]">
+                    <img src="./3d-images/Data-driven.svg" alt="data-driven">
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-8 text-center md:text-left pt-0 md:mt-[100px] mt-[10px]">
+            <div class="mx-auto pt-0 pb-16 grid md:grid-cols-3 gap-[32px] md:gap-[32px]">
+
+                <div class="flex flex-col items-center text-center">
+
+                    <div
+                        class="flex rounded-[28px] !border-[8px] !border-[rgba(21,77,210,0.04)] !bg-[rgba(21,77,210,0.05)] w-[58px] h-[58px] p-1 m-1 items-center justify-center mx-auto">
+                        <img src="./3d-icons/pipeline.svg" alt="pipeline" class="flex items-center">
+                    </div>
+                    <p class="text-[#101828] text-[20px] font-medium leading-[30px] tracking-[-0.4px] !mt-[20px]">
+                        Pipeline</p>
+                    <p class="text-[#131110] text-center text-[17.86px] font-normal leading-[30.6px] tracking-[-0.4px]">
+                        Send your first-party data to Genesis to centralize customer information from various sources
+                        such as websites, CRM systems, mobile apps, and offline interactions. Genesis ensures
+                        consistency, accuracy, and a holistic customer view.</p>
+                </div>
+
+                <div class="flex flex-col items-center text-center">
+                    <div
+                        class="flex rounded-[28px] !border-[8px] !border-[rgba(21,77,210,0.04)] !bg-[rgba(21,77,210,0.05)] w-[58px] h-[58px] p-1 m-1 items-center justify-center mx-auto">
+                        <img src="./3d-icons/segment.svg" alt="pipeline" class="flex items-center">
+                    </div>
+                    <p class="text-[#101828] text-[20px] font-medium leading-[30px] tracking-[-0.4px] !mt-[20px]">
+                        Segment</p>
+                    <p class="text-[#131110] text-center text-[17.86px] font-normal leading-[30.6px] tracking-[-0.4px]">
+                        By leveraging AI-driven segmentation, you can deliver highly personalized experiences, send
+                        targeted messages at the right time, and optimize customer journeys for better engagement,
+                        retention, and conversion rates.</p>
+                </div>
+
+                <div class="flex flex-col items-center text-center">
+                    <div
+                        class="flex rounded-[28px] !border-[8px] !border-[rgba(21,77,210,0.04)] !bg-[rgba(21,77,210,0.05)] w-[58px] h-[58px] p-1 m-1 items-center justify-center mx-auto">
+                        <img src="./3d-icons/engage.svg" alt="pipeline" class="flex items-center">
+                    </div>
+                    <p class="text-[#101828] text-[20px] font-medium leading-[30px] tracking-[-0.4px] !mt-[20px]">Engage
+                    </p>
+                    <p class="text-[#131110] text-center text-[17.86px] font-normal leading-[30.6px] tracking-[-0.4px]">
+                        Create targeted campaigns and automate messaging based on triggers like user actions, behavior,
+                        and milestones. Ensure timely, personalized communication to enhance engagement, and drive
+                        conversions effortlessly.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- POWER YOUR ENGAGEMENT -->
+    <section class="text-center py-[45px] px-6" id="products">
+        <div class="max-w-7xl mx-auto">
+            <h2
+                class="text-[#131110] text-center w-[80%] md:w-[35%] !text-[40px] font-medium leading-[42px] tracking-[-2px] !mb-[20px] mx-auto">
+                Power your Engagement with Seamless Data Integration</h2>
+            <p
+                class="text-[#131110] text-center text-[17.859px] font-normal leading-[30.6px] tracking-[-0.4px] w-[90%] md:w-[45%] mx-auto mb-12">
+                Unlock the full potential of your customer data by connecting every touchpoint—applications, websites,
+                socials, and databases—into a unified platform.
+            </p>
+            <div class="flex items-center mx-auto w-full justify-center">
+                <img src="./3d-images/segmentation.svg" alt="segmentation">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT MAKES US DIFFERENT -->
+    <div class="bg-[#FFF] flex justify-center items-center min-h-screen" id="why">
+        <div class="w-full max-w-7xl bg-[#FFF] p-6">
+            <div class="text-center mb-6">
+                <p class="text-[#131110] text-center text-[16px] font-medium leading-[23px] !mb-[12px]">What Makes Us
+                    Different</p>
+                <h2
+                    class="text-[#131110] text-center w-[90%] md:w-[40%] !text-[40px] font-medium leading-[42px] tracking-[-2px] !mb-[20px] mx-auto">
+                    Seamless, Customer-centric, and Standardized</h2>
+            </div>
+
+            <div class="mt-[20px] md:mt-[80px] grid !gap-[37px]">
+                <div class="grid md:!grid-cols-[7fr_5fr] !grid-cols-[12fr] gap-[36px]">
+                    <div
+                        class="rounded-[20px] !bg-[#F3F4FF] !border border-solid !border-[#D6DEFA] grid gap-[40px] !p-[30px]">
+                        <div><img src="./3d-images/customer.svg" alt="customer"></div>
+                        <div>
+                            <h3 class="!text-[23px] !text-[#131110] font-medium leading-[27px]  !mb-[16px]">
+                                Customer-Centric Journey Framework</h3>
+                            <p
+                                class="md:!text-[16px] text-[13px] !text-[#000] font-normal md:leading-[24px] leading-[20px] ">
+                                Map, track, and optimise every stage of the customer lifecycle—from macro overviews to
+                                micro touch points. Our platform helps you create personalised engagement strategies
+                                that adapt to real-time customer actions.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="rounded-[20px] !bg-[#F3F4FF] !border border-solid !border-[#D6DEFA] grid gap-[20px] !pt-[30px] !pl-[30px]">
+                        <div>
+                            <h3 class="!text-[23px] !text-[#131110] font-medium leading-[27px] !mb-[16px]">Unified Data,
+                                Smarter Insights</h3>
+                            <p
+                                class="md:!text-[16px] text-[13px] !text-[#000] font-normal md:leading-[24px] leading-[20px] w-[90%]">
+                                Gain a comprehensive understanding of customer behaviour to deliver data-driven,
+                                personalised experiences.</p>
+                        </div>
+
+
+                        <img src="./3d-images/Table.svg" alt="customer" class="flex items-right w-full ml-auto">
+
+
+                    </div>
+                </div>
+                <div class="grid md:!grid-cols-[5fr_7fr] !grid-cols-[12fr] gap-[36px]">
+                    <div
+                        class="rounded-[20px] !bg-[#F3F4FF] !border border-solid !border-[#D6DEFA] grid gap-[8px] !p-[30px] !pt-0">
+                        <img src="./3d-images/taxonomy.svg" alt="customer">
+                        <div>
+                            <h3 class="!text-[23px] !text-[#131110] font-medium leading-[27px] !mb-[16px]">Scale Without
+                                Limits</h3>
+                            <p
+                                class="md:!text-[16px] text-[13px] !text-[#000] font-normal md:leading-[24px] leading-[20px]">
+                                Whether you're engaging hundreds or millions, our platform is built to scale. Automate
+                                and personalise your customer journeys with real-time data, no matter how complex your
+                                needs grow.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="rounded-[20px] !bg-[#F3F4FF] !border border-solid !border-[#D6DEFA] grid gap-[20px] !p-[30px]">
+                        <div>
+                            <h3 class="!text-[23px] !text-[#131110] font-medium leading-[27px] !mb-[16px]">Secure and
+                                Tested</h3>
+                            <p
+                                class="md:!text-[16px] text-[13px] !text-[#000] font-normal md:leading-[24px] leading-[20px]">
+                                Our platform is built with enterprise-grade encryption, rigorous access controls, and
+                                compliance with industry standards—ensuring your customer information is always
+                                protected.</p>
+                        </div>
+
+                        <img src="./3d-images/platform.svg" alt="customer">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SEAMLESS DATA INTERGRATION -->
+    <div class="bg-[#FFF] flex justify-center items-center min-h-screen mt-[80px]" id="howitworks">
+        <div class="w-full max-w-7xl bg-[#FFF] p-6">
+            <div class="text-center mb-6">
+                <p class="text-[#131110] text-center text-[16px] font-medium leading-[23px] !mb-[12px]">How It Works</p>
+                <h2
+                    class="text-[#131110] text-center w-[90%] md:w-[50%] !text-[40px] font-medium leading-[42px] tracking-[-2px] !mb-[20px] mx-auto">
+                    Seamless Data Integration, Smart Segmentation, and Automated Engagement</h2>
+            </div>
+            <div class="mt-[20px] md:mt-[80px] grid !gap-[37px]">
+                <div class="grid md:!grid-cols-[7fr_5fr] !grid-cols-[12fr] gap-[90px]">
+
+                    <!-- <div class="rounded-[20px] !bg-[#F3F4FF] !border border-solid !border-[#D6DEFA] grid gap-[8px] !p-[30px] flex justify-center items-center"> -->
+                    <img src="./3d-images/customer-data.svg" alt="customer">
+                    <!-- </div> -->
+
+                    <div class="space-y-4">
+                        <div class="border-b border-t py-7">
+                            <details class="group">
+                                <summary
+                                    class="text-[#131110] !text-[23px] font-medium leading-[27.6px] tracking-[-0.5px]  flex justify-between items-center cursor-pointer">
+                                    Connect your Data
+                                    <img class="toggle-sign" src="./3d-icons/arrow-up.svg" alt="Toggle Icon" width="15"
+                                        height="15">
+                                </summary>
+                                <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Integrate
+                                    your first-party data from websites, CRM systems, mobile apps, and offline sources.
+                                </p>
+                            </details>
+                        </div>
+
+                        <div class="border-b py-7">
+                            <details class="group">
+                                <summary
+                                    class="text-[#131110] !text-[23px] font-medium leading-[27.6px] tracking-[-0.5px] flex justify-between items-center cursor-pointer">
+                                    Process & Organise
+                                    <img class="toggle-sign" src="./3d-icons/arrow-up.svg" alt="Toggle Icon" width="15"
+                                        height="15">
+                                </summary>
+                                <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Yes, we
+                                    can. Our AI cleans, structures, and enriches your data, ensuring accuracy and
+                                    consistency across all customer touchpoints.</p>
+                            </details>
+                        </div>
+
+                        <div class="border-b py-7">
+                            <details class="group">
+                                <summary
+                                    class="text-[#131110] !text-[23px] font-medium leading-[27.6px] tracking-[-0.5px] flex justify-between items-center cursor-pointer">
+                                    Segment your Audience
+                                    <img class="toggle-sign" src="./3d-icons/arrow-up.svg" alt="Toggle Icon" width="15"
+                                        height="15">
+                                </summary>
+                                <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Using
+                                    AI-driven analysis, Genesis identifies patterns in customer behaviour and
+                                    attributes, creating dynamic audience segments for precise targeting.</p>
+                            </details>
+                        </div>
+
+                        <div class="border-b py-7">
+                            <details class="group">
+                                <summary
+                                    class="text-[#131110] !text-[23px] font-medium leading-[27.6px] tracking-[-0.5px] flex justify-between items-center cursor-pointer">
+                                    Automate Engagement
+                                    <img class="toggle-sign" src="./3d-icons/arrow-up.svg" alt="Toggle Icon" width="15"
+                                        height="15">
+                                </summary>
+                                <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Set up
+                                    automated workflows that trigger personalized messages based on customer actions,
+                                    lifecycle stages, or engagement levels.</p>
+                            </details>
+                        </div>
+
+                        <div class="border-b py-7">
+                            <details class="group">
+                                <summary
+                                    class="text-[#131110] !text-[23px] font-medium leading-[27.6px] tracking-[-0.5px] flex justify-between items-center cursor-pointer">
+                                    Track & Optimize
+                                    <img class="toggle-sign" src="./3d-icons/arrow-up.svg" alt="Toggle Icon" width="15"
+                                        height="15">
+                                </summary>
+                                <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Monitor
+                                    campaign performance and customer interactions in real time. Use AI-powered insights
+                                    to refine strategies and maximize results.</p>
+                            </details>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- DRIVING IMPACT -->
+    <div class="bg-[#FFF] flex justify-center items-center min-h-screen !mt-[60px] md!mt-[160px]">
+        <div class="w-full max-w-7xl bg-[#FFF] p-6">
+            <div class="text-center mb-6">
+                <p class="text-[#131110] text-center text-[16px] font-medium leading-[23px] !mb-[12px]">
+                    Genesis for Industries
+                </p>
+                <h2
+                    class="text-[#131110] text-center w-[90%] md:w-[40%] !text-[40px] font-medium leading-[42px] tracking-[-2px] !mb-[5px] mx-auto">
+                    Driving Impact across Industries</h2>
+            </div>
+            <div class="mt-[20px] grid !gap-[37px]">
+                <div class="grid md:!grid-cols-[6fr_6fr] !grid-cols-[12fr] gap-[24px]">
+
+                    <div
+                        class="rounded-[20px] !bg-[#F3F4FF] !border border-solid !border-[#D6DEFA] grid gap-[8px] !p-[30px] flex flex-col">
+                        <div class="p-[12px] bg-[#131110] rounded-[10px] w-[48px] h-[48px]">
+                            <img src="./3d-icons/services.svg" alt="services">
+                        </div>
+                        <h4 class="!text-[20px] font-bold text-[#101828] !mt-[13px]">Financial Services</h4>
+                        <p class="text-[#131110] !text-[18px] font-normal leading-[30.6px] tracking-[-0.4px]">Engage
+                            customers with personalized financial experiences and automated communications.</p>
+                        <div class="flex gap-[8px] items-center mt-[13px]">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Onboard users with tailored financial guidance</p>
+                        </div>
+                        <div class="flex gap-[8px] items-center">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Automate fraud alerts and compliance updates</p>
+                        </div>
+                        <div class="flex gap-[8px] items-center">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Boost product adoption with AI-driven personalization</p>
+                        </div>
+                    </div>
+                    <div
+                        class="rounded-[20px] !bg-[#F3F4FF] !border border-solid !border-[#D6DEFA] grid gap-[8px] !p-[30px] flex flex-col">
+                        <div class="p-[12px] bg-[#131110] rounded-[10px] w-[48px] h-[48px]">
+                            <img src="./3d-icons/business.svg" alt="services">
+                        </div>
+                        <h4 class="!text-[20px] font-bold text-[#101828] !mt-[13px]">Retail Business</h4>
+                        <p class="text-[#131110] !text-[18px] font-normal leading-[30.6px] tracking-[-0.4px]">Enhance
+                            customer journeys with seamless omnichannel engagement.</p>
+                        <div class="flex gap-[8px] items-center mt-[13px]">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Personalize offers across digital and physical stores</p>
+                        </div>
+                        <div class="flex gap-[8px] items-center">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Improve retention with lifecycle-driven messaging</p>
+                        </div>
+                        <div class="flex gap-[8px] items-center">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Amplify customer experience with product recommendations</p>
+                        </div>
+                    </div>
+                    <div
+                        class="rounded-[20px] !bg-[#F3F4FF] !border border-solid !border-[#D6DEFA] grid gap-[8px] !p-[30px] flex flex-col">
+                        <div class="p-[12px] bg-[#131110] rounded-[10px] w-[48px] h-[48px]">
+                            <img src="./3d-icons/fmc.svg" alt="services">
+                        </div>
+                        <h4 class="!text-[20px] font-bold text-[#101828] !mt-[13px]">FMCG</h4>
+                        <p class="text-[#131110] !text-[18px] font-normal leading-[30.6px] tracking-[-0.4px]">Enhance
+                            customer experience with data-driven marketing for targeted promotions and lasting loyalty.
+                        </p>
+                        <div class="flex gap-[8px] items-center mt-[13px]">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Send personalized offers based on purchase behavior</p>
+                        </div>
+                        <div class="flex gap-[8px] items-center">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Collect and act on real-time customer feedback</p>
+                        </div>
+                        <div class="flex gap-[8px] items-center">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Automate loyalty programs to reward repeat customers</p>
+                        </div>
+                    </div>
+                    <div
+                        class="rounded-[20px] !bg-[#F3F4FF] !border border-solid !border-[#D6DEFA] grid gap-[8px] !p-[30px] flex flex-col">
+                        <div class="p-[12px] bg-[#131110] rounded-[10px] w-[48px] h-[48px]">
+                            <img src="./3d-icons/utilities.svg" alt="services">
+                        </div>
+                        <h4 class="!text-[20px] font-bold text-[#101828] !mt-[13px]">Utilities</h4>
+                        <p class="text-[#131110] !text-[18px] font-normal leading-[30.6px] tracking-[-0.4px]">Streamline
+                            communication, improve service transparency, and deliver timely updates for better customer
+                            engagement.</p>
+                        <div class="flex gap-[8px] items-center mt-[13px]">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Send real-time outage and maintenance alerts</p>
+                        </div>
+                        <div class="flex gap-[8px] items-center">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Automate billing reminders and payment updates</p>
+                        </div>
+                        <div class="flex gap-[8px] items-center">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Educate customers with personalized service insights</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- OUR BLOG -->
+    <!-- <div class="bg-white" id="resources">
+            <section class="text-center max-w-7xl mx-auto pt-[32px] pb-[50px] md:pb-[100px] px-[24px] !mt-[60px] md!mt-[160px]">
+                <div class="text-center mb-6">
+                    <p class="text-[#131110] text-center text-[16px] font-medium leading-[23px] !mb-[12px]">
+                        Resources
+                        </p>
+                    <h2 class="text-[#131110] text-center w-[90%] md:w-[50%] !text-[40px] font-medium leading-[42px] tracking-[-2px] !mb-[20px] mx-auto">Most Read Guides</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 md:gap-6 mt-10 px-6 md:px-0">
+                    <div>
+                        <img src="./3d-images/blog-1.svg" alt="Blog Image" class="rounded-md mb-4 w-full">
+                        <p class="text-[#131110] !text-[10px] font-medium leading-[11px] tracking-[0.4px] uppercase text-left px-[15px] py-[7px]  !border-2 border-solid !border-[#131110] rounded-[100px] bg-[#fff] w-fit">cx</p>
+                        <h3 class="text-[#101828] !text-[22px] font-semibold leading-[32px] my-2 text-left">10 CX mistakes hiding in
+                            plain sight</h3>
+                        <p class="text-[#131110] !text-[16px] font-normal leading-[23px] tracking-[-0.2px] text-left w-[85%]">When you nip these common CX mistakes
+                            in the bud, you’ll not only improve your
+                            immediate CX metrics, but set your team
+                            up for future success by building customer
+                            trust and loyalty.</p>
+                        
+                        <a href="blog-content.html" class="text-blue-600 font-semibold mt-4 block">
+                            <button class="flex gap-2 !text-[12px] items-center rounded-[5px] !bg-[#fff] text-black text-left"> READ MORE <img src="./3d-icons/arrow-right.svg" alt="arrow"> </button></a>
+                    </div>
+                    
+                    <div>
+                        <img src="./3d-images/blog-2.svg" alt="Blog Image" class="rounded-md mb-4 w-full">
+                        <p class="text-[#131110] !text-[10px] font-medium leading-[11px] tracking-[0.4px] uppercase text-left px-[15px] py-[7px]  !border-2 border-solid !border-[#131110] rounded-[100px] bg-[#fff] w-fit">Journey management</p>
+                        <h3 class="text-[#101828] !text-[22px] font-semibold leading-[32px] my-2 text-left">6 strategies to conduct
+                            interviews that uncover the
+                            customer journey</h3>
+                        <p class="text-[#131110] !text-[16px] font-normal leading-[23px] tracking-[-0.2px] text-left w-[85%]">Learn how to create a journey-generating
+                            conversation with your customers. Design
+                            interview questions and learn techniques
+                            that uncover your customer’s hidden needs.</p>
+                        
+                        <a href="blog-content.html" class="text-blue-600 font-semibold mt-4 block">
+                            <button class="flex gap-2 !text-[12px] py-0 justify-center items-center rounded-[5px] !bg-[#fff] text-black">  READ MORE <img src="./3d-icons/arrow-right.svg" alt="arrow"> </button></a>
+                    </div>
+                    
+                    <div>
+                        <img src="./3d-images/blog-3.svg" alt="Blog Image" class="rounded-md mb-4 w-full">
+                        <p class="text-[#131110] !text-[10px] font-medium leading-[11px] tracking-[0.4px] uppercase text-left px-[15px] py-[7px]  !border-2 border-solid !border-[#131110] rounded-[100px] bg-[#fff] w-fit">Journey management</p>
+
+                        <h3 class="text-[#101828] !text-[22px] font-semibold leading-[32px] my-2 text-left">6 Tips for Creating
+                            Successful Opportunities</h3>
+                        <p class="text-[#131110] !text-[16px] font-normal leading-[23px] tracking-[-0.2px] text-left w-[85%]">Creating a strong compliance program is not just about checking boxes; it’s about embedding a culture of compliance into the fabric of your organization. Golden Compliance specializes in designing and...</p>
+                        
+                        <a href="blog-content.html" class="text-blue-600 font-semibold mt-4 block">
+                            <button class="flex !text-[12px] py-0 justify-center items-center rounded-[5px] gap-2 !bg-[#fff] text-black"> READ MORE <img src="./3d-icons/arrow-right.svg" alt="arrow"> </button>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div> -->
+
+    <!-- AELLA MFB -->
+    <div class=" py-10 md:px-6 px-4 bg-black mt-10 md:mt-35">
+        <div class="bg-black text-white rounded-xl overflow-hidden flex flex-col md:flex-row max-w-7xl w-full mx-auto">
+
+            <div class="md:p-8 p-6 flex-1">
+                <h2 class=" text-white !text-[38px] font-medium leading-[42px] tracking-[-2px] w-[100%] md:w-[70%]">
+                    Aella Mfb drives financial inclusion with personalized customer engagement</h2>
+                <p class="text-white !text-[18px] font-normal leading-[27px] tracking-[-1px] !mt-[30px] w-[90%]">Through
+                    personalized communication and data-driven outreach, Aella microfinance bank achieved a significant
+                    increase in customer acquisition and engagement, empowering underserved communities with seamless
+                    financial services.</p>
+                <div class="flex mt-6 space-x-8">
+                    <div>
+                        <p class="text-white !text-[34px] font-medium leading-[42px] tracking-[-2px]">65%</p>
+                        <p class="text-[#ECEAEA99] !text-[14px] font-normal leading-[19px] tracking-[-0.2px] ">Increase
+                            in customer retention</p>
+                    </div>
+                    <div>
+                        <p class="text-white !text-[38px] font-medium leading-[42px] tracking-[-2px]">40%</p>
+                        <p class="text-[#ECEAEA99] !text-[14px] font-normal leading-[19px] tracking-[-0.2px] ">Reduction
+                            in customer churn</p>
+                    </div>
+                    <div>
+                        <p class="text-white !text-[38px] font-medium leading-[42px] tracking-[-2px]">3x</p>
+                        <p class="text-[#ECEAEA99] !text-[14px] font-normal leading-[19px] tracking-[-0.2px]">Faster
+                            loan approvals</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" flex md:grid md:grid-rows-[3fr_9fr] bg-black ">
+                <div class="hidden md:inline-block">
+
+                </div>
+                <div class="relative w-full">
+                    <img src="./3d-images/aella.svg" alt="Customer engagement" class="h-full w-full object-cover" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- FAQS -->
+    <div class="flex items-center justify-center bg-white text-black pt-[96px] mb-[45px] md:mb-[186px]">
+        <div class="max-w-4xl w-full bg-white p-6 mx-auto">
+            <div class="text-center mb-6">
+                <div
+                    class="text-[#131110] flex gap-[10px] items-center justify-center text-center text-[16px] font-medium leading-[23px] !mb-[30px]">
+                    <img src="./3d-icons/logo.svg" alt="GCS Logo" class="h-8">
+                    <p>FAQs</p>
+                </div>
+
+                <h2
+                    class="text-[#131110] text-center w-[90%] md:w-[70%] !text-[40px] font-medium leading-[42px] tracking-[-2px] !mb-[20px] mx-auto">
+                    Everything you need to know about the product and billing.</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="border-b py-7">
+                    <details class="group">
+                        <summary
+                            class="text-[#131110] !text-[18px] font-medium leading-[27.6px] tracking-[-0.5px]  flex justify-between items-center cursor-pointer">
+                            Is there a free trial available?
+                            <img class="faq-toggle-sign" src="./3d-icons/plus.svg" alt="Toggle Icon" width="22"
+                                height="22">
+                        </summary>
+                        <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Yes, you can try
+                            us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute
+                            onboarding call to get you up and running as soon as possible.</p>
+                    </details>
+                </div>
+
+                <div class="border-b py-7">
+                    <details class="group">
+                        <summary
+                            class="text-[#131110] !text-[18px] font-medium leading-[27.6px] tracking-[-0.5px] flex justify-between items-center cursor-pointer">
+                            Can I change my plan later?
+                            <img class="faq-toggle-sign" src="./3d-icons/plus.svg" alt="Toggle Icon" width="22"
+                                height="22">
+                        </summary>
+                        <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Yes, we can. Our
+                            AI cleans, structures, and enriches your data, ensuring accuracy and consistency across all
+                            customer touchpoints.</p>
+                    </details>
+                </div>
+
+                <div class="border-b py-7">
+                    <details class="group">
+                        <summary
+                            class="text-[#131110] !text-[18px] font-medium leading-[27.6px] tracking-[-0.5px] flex justify-between items-center cursor-pointer">
+                            What is your cancellation policy?
+                            <img class="faq-toggle-sign" src="./3d-icons/plus.svg" alt="Toggle Icon" width="22"
+                                height="22">
+                        </summary>
+                        <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Using AI-driven
+                            analysis, Genesis identifies patterns in customer behaviour and attributes, creating dynamic
+                            audience segments for precise targeting.</p>
+                    </details>
+                </div>
+
+                <div class="border-b py-7">
+                    <details class="group">
+                        <summary
+                            class="text-[#131110] !text-[18px] font-medium leading-[27.6px] tracking-[-0.5px] flex justify-between items-center cursor-pointer">
+                            Can other info be added to an invoice?
+                            <img class="faq-toggle-sign" src="./3d-icons/plus.svg" alt="Toggle Icon" width="22"
+                                height="22">
+                        </summary>
+                        <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Set up automated
+                            workflows that trigger personalized messages based on customer actions, lifecycle stages, or
+                            engagement levels.</p>
+                    </details>
+                </div>
+
+                <div class="border-b py-7">
+                    <details class="group">
+                        <summary
+                            class="text-[#131110] !text-[18px] font-medium leading-[27.6px] tracking-[-0.5px] flex justify-between items-center cursor-pointer">
+                            How does billing work?
+                            <img class="faq-toggle-sign" src="./3d-icons/plus.svg" alt="Toggle Icon" width="22"
+                                height="22">
+                        </summary>
+                        <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Monitor campaign
+                            performance and customer interactions in real time. Use AI-powered insights to refine
+                            strategies and maximize results.</p>
+                    </details>
+                </div>
+
+                <div class="py-7">
+                    <details class="group">
+                        <summary
+                            class="text-[#131110] !text-[18px] font-medium leading-[27.6px] tracking-[-0.5px] flex justify-between items-center cursor-pointer">
+                            How do I change my account email?
+                            <img class="faq-toggle-sign" src="./3d-icons/plus.svg" alt="Toggle Icon" width="22"
+                                height="22">
+                        </summary>
+                        <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Monitor campaign
+                            performance and customer interactions in real time. Use AI-powered insights to refine
+                            strategies and maximize results.</p>
+                    </details>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- READY TO UNLOCK -->
+    <div class="bg-[#F3F4FF] py-[100px]">
+        <div class="max-w-7xl grid item-center justify-center mx-auto">
+            <h3 class="text-[#131110] text-center !text-[40px] font-medium leading-[42px] tracking-[-2px] !mb-11">
+                Ready to unlock the power of your customer data?
+            </h3>
+
+            <div class="flex justify-center gap-3 pb-[53px] font-bold">
+                <a href="#">
+                    <button
+                        class="flex bg-black !text-[#fff] !px-[20px] !py-[10px] rounded-md border-2 border-black border-solid">
+                        Request a demo</button>
+                </a>
+                <a href="#" class="register-link" target="_blank">
+                    <button
+                        class=" flex bg-transparent text-black !px-[26px] !py-[10px] rounded-md border-2 border-black border-solid">Get
+                        started</button>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="bg-black text-white">
+        <div class="max-w-7xl mx-auto p-8 pb-8 !pt-[80px] ">
+            <div
+                class="flex flex-col md:flex-row justify-between items-start md:items-center border-b !border-[#7B7674] border-solid pb-6">
+
+                <div class="flex-1 grid grid-cols-1 md:grid-cols-4 gap-6 mt-6 md:mt-0">
+                    <div>
+                        <div class="flex items-center gap-0 !mb-[31px]">
+                            <img src="./3d-icons/logo.svg" alt="Genesis Logo" class="h-8" />
+                            <span class="!text-[16px] font-black leading-[17px] w-[50%] text-[#FCFBFA]">GENESIS</span>
+                        </div>
+                        <p class="!text-[30px] font-normal leading-[32px] tracking-[-0.3px] w-[80%] text-[#FCFBFA]">
+                            Unlocking the power of customer data</p>
+                        <div class="flex space-x-3 !mt-[44px]">
+                            <a href="#"><img src="./3d-icons/linkedIn.svg" alt="LinkedIn" class="h-6"></a>
+                            <a href="#"><img src="./3d-icons/youtube.svg" alt="YouTube" class="h-6"></a>
+                            <a href="#"><img src="./3d-icons/twitter.svg" alt="X" class="h-6"></a>
+                        </div>
+                    </div>
+
+                    <div class="order-2 md:order-2">
+                        <h3 class="text-[#FCFBFA] !text-[16px] font-medium leading-[17px] mb-2">Links</h3>
+                        <ul class="space-y-1 text-[#7B7674] !text-[16px] font-normal leading-[23px] tracking-[-0.2px]">
+                            <li class="!mb-[10px]"><a href="#">Home</a></li>
+                            <li class="!mb-[10px]"><a href="#products">Product</a></li>
+                            <li class="!mb-[10px]"><a href="#why">Why Us</a></li>
+                            <li class="!mb-[10px]"><a href="#howitworks">How it works</a></li>
+
+                            <!-- <li class="!mb-[10px]"><a href="#">Resources</a></li> -->
+                        </ul>
+                    </div>
+
+                    <div class="order-3 md:order-3">
+                        <h3 class="text-[#FCFBFA] !text-[16px] font-medium leading-[17px] mb-2">Contact Us</h3>
+                        <ul class="space-y-1 text-[#7B7674] !text-[16px] font-normal leading-[23px] tracking-[-0.2px]">
+                            <li class="!mb-[10px]"><a href="mailto:hello@genesis.io">hello@genesis.io</a></li>
+                            <li class="!mb-[10px]"><a href="#">LinkedIn</a></li>
+                            <li class="!mb-[10px]"><a href="#">Instagram</a></li>
+                            <li class="!mb-[10px]"><a href="#">Twitter</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="order-4 md:order-4">
+                        <h3 class="text-[#FCFBFA] !text-[16px] font-medium leading-[17px] !mb-[21px]">Stay up to date
+                        </h3>
+                        <div class="flex space-x-2">
+                            <input type="email" placeholder="Enter your email"
+                                class="px-3 py-2 rounded-md bg-white text-black w-full">
+                            <button class="bg-white text-black font-semibold px-4 py-2 rounded-md">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Section -->
+            <div
+                class="flex flex-col md:flex-row justify-between items-center mt-6 text-[#7B7674] !text-[13px] font-normal leading-[23px] tracking-[-0.2px]">
+                <p>&copy; 2025 Genesis.</p>
+                <div class="flex space-x-4">
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        hamburger.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('active');
+            hamburgerIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+    </script>
+
+
+    <script>
+        document.querySelectorAll('details').forEach((detail) => {
+            detail.addEventListener('toggle', () => {
+                // Close other dropdowns if this one is opened
+                if (detail.open) {
+                    document.querySelectorAll('details').forEach((otherDetail) => {
+                        if (otherDetail !== detail && otherDetail.open) {
+                            otherDetail.open = false; // Close the other dropdown
+                        }
+                    });
+                }
+
+                // Update the icon based on the open state
+                const icon = detail.querySelector('.toggle-sign') || detail.querySelector('.faq-toggle-sign');
+                if (detail.open) {
+                    if (icon.classList.contains('toggle-sign')) {
+                        icon.src = './3d-icons/arrow-down.svg';
+                    } else if (icon.classList.contains('faq-toggle-sign')) {
+                        icon.src = './3d-icons/minus.svg';
+                    }
+                } else {
+                    if (icon.classList.contains('toggle-sign')) {
+                        icon.src = './3d-icons/arrow-up.svg';
+                    } else if (icon.classList.contains('faq-toggle-sign')) {
+                        icon.src = './3d-icons/plus.svg';
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- REGISTER LINK -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const newLink = "https://cdp-frontend-staging-749119130796.europe-west1.run.app/register"; // New URL
+            document.querySelectorAll("a.register-link").forEach(link => {
+                link.href = newLink;
+            });
+        });
+    </script>
+
+    <!-- LOGIN LINK -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const newLink = "https://cdp-frontend-staging-749119130796.europe-west1.run.app/login"; // New URL
+            document.querySelectorAll("a.login-link").forEach(link => {
+                link.href = newLink;
+            });
+        });
+    </script>
+
+    <!-- Simple Image Slider -->
+    <script>
+        const sliderImages = [
+            './3d-images/leg-2.png',
+            './3d-images/box.png',
+            './3d-images/leg-2.png'
+        ];
+        let currentSlide = 0;
+        const slideImg = document.getElementById('slide-img');
+        function showNextSlide() {
+            // Fade out
+            slideImg.style.opacity = 0;
+            setTimeout(() => {
+                currentSlide = (currentSlide + 1) % sliderImages.length;
+                slideImg.src = sliderImages[currentSlide];
+                // Fade in
+                slideImg.style.opacity = 1;
+            }, 700); // match duration-700
+        }
+        setInterval(showNextSlide, 2000);
+    </script>
+
+</body>
+
+</html>

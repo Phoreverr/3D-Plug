@@ -1,0 +1,82 @@
+.hamburger {
+    position: relative;
+    z-index: 20; /* Ensure it is above other elements */
+    }
+
+    .dropdown-menu {
+        display: none;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .dropdown-menu.active {
+        display: flex;
+    }
+
+    .hamburger.active + .dropdown-menu {
+        display: flex;
+        color: #dcdfe3;
+    }
+    .custom-bg {
+        background: linear-gradient(90deg, #1B4962 0%, rgba(27, 73, 98, 0.50) 100%);
+    }
+
+    summary::-webkit-details-marker { display: none }
+
+
+
+    /* SLIDESHOW */
+
+    .slideshow-container {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+    }
+    
+    .slideshow {
+        display: flex;
+        flex-wrap: nowrap; /* Prevents images from wrapping */
+        align-items: center;
+        width: max-content; /* Ensures the container is wide enough */
+        animation: slide 10s linear infinite;
+    }
+    
+    .slideshow img {
+        width: 180px; /* Adjust width */
+        max-width: 20vw; /* Ensures responsiveness */
+        margin: 0 10px; /* Adjust spacing */
+    }
+    
+    /* Keyframes for infinite sliding effect */
+    @keyframes slide {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%); /* Moves by half to loop seamlessly */
+        }
+    }
+    
+    /* Mobile-specific adjustments */
+    @media (max-width: 768px) {
+        .slideshow img {
+            width: 80px; /* Reduce image size */
+            max-width: 18vw;
+            margin: 0 5px; /* Reduce spacing */
+        }
+    
+        @keyframes slide {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+    }
+    
+
+    @keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+       
