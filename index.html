@@ -21,7 +21,7 @@
     <!-- NAVBAR -->
     <nav class="!bg-[#fff] fixed top-0 w-full z-50">
         <div class="max-w-[1250px] mx-auto">
-            <div class="flex justify-between items-center px-[20px] py-[20px]">
+            <div class="flex justify-between items-center !px-[20px] !py-[20px]">
                 <div class="flex text-[15.75px] font-extrabold leading-[17.6px]">
 
                     <a href="#" class="flex gap-0 items-center">
@@ -53,8 +53,23 @@
                 <div class="hidden lg:flex gap-[10px]">
                     <a href="#" class="register-link" target="_blank">
                         <button
-                            class="hidden lg:flex !bg-[#D20F4B] !border-[#D20F4B] border-2 font-bold !text-[#fff] !px-[28px] !py-[12px] rounded-md">Get
+                            class="hidden lg:flex !bg-[#D20F4B] !border-[#D20F4B] border-2 font-bold !text-[#fff] !px-[28px] !py-[12px] rounded-md wiggle-btn">Get
                             Started</button>
+    <style>
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            10% { transform: rotate(-7deg); }
+            20% { transform: rotate(7deg); }
+            30% { transform: rotate(-7deg); }
+            40% { transform: rotate(7deg); }
+            50% { transform: rotate(0deg); }
+        }
+        .wiggle-btn {
+            display: inline-flex;
+            animation: wiggle 0.5s ease-in-out;
+            animation-iteration-count: 1;
+        }
+    </style>
                     </a>
                 </div>
 
@@ -78,22 +93,21 @@
         </div>
     </nav>
 
-    <!-- HEADER -->
     <div class="!bg-[#fff] !text-black mt-[100px]">
-        <div class="grid grid-cols-2 max-w-7xl mx-auto !h-[85%]">
+        <div class="grid grid-cols-1 md:grid-cols-2 max-w-7xl mx-auto !h-[85%] px-5">
             <div>
                 <h1
-                    class="text-left leading-[70px] !text-[72px] font-bold tracking-[-2px] !mb-[20px] md:!mb-[40px] !mt-[20px] md:!mt-[30px]">
-                    We are at the forefront of innovation in additive manufacturing.</h1>
+                    class="text-left leading-[45px] md:leading-[70px] !text-[50px] md:!text-[72px] font-bold tracking-[-2px] !mb-[20px] md:!mb-[40px] !mt-[20px] md:!mt-[30px]">
+                    We are at the forefront of <span class="innovation">innovation</span> in additive manufacturing.</h1>
                 <p
-                    class="!text-[24px] !text-black !mb-[48px] md:w-[80%] w-[90%] text-left !text-[20px] font-normal leading-[30.6px] tracking-[-0.4px]">
+                    class="!text-[16px] md:!text-[24px] !text-black !mb-[48px] md:w-[80%] w-[90%] text-left !text-[20px] font-normal leading-[25px] md:leading-[30.6px] tracking-[-0.4px]">
                     We deliver precise 3D printing and scanning services that empower innovation across design,
                     engineering, manufacturing, healthcare and more.
                 </p>
             </div>
             <div>
                 <div id="image-slider" class="flex justify-center items-center">
-                    <img id="slide-img" src="./3d-images/leg-2.png" alt="slide" class="!w-full !h-full transition-opacity duration-1000 opacity-100">
+                    <img id="slide-img" src="./3d-images/leg-2.png" alt="slide" class="!w-full !h-full transition-opacity duration-10n00 opacity-100">
                 </div>
             </div>
         </div>
@@ -131,21 +145,23 @@
 
         <!-- DATA DRIVEN -->
         <section class="max-w-7xl mx-auto px-8 text-center md:text-left pt-16 md:pt-0">
-            <div class="mx-auto pt-0 pb-16 grid md:grid-cols-2 gap-[32px] md:gap-0 items-center justify-center">
-                <div class="grid">
+            <div class="mx-auto pt-0 pb-16 grid md:grid-cols-2 gap-[32px] md:gap-10 items-center justify-center">
+                <div class="grid gap-6">
                     <h3
                         class="text-[#131110] mx-auto md:mx-0 w-[100%] !text-[40px] font-medium leading-[42px] tracking-[-2px] !mb-[20px] md:w-[75%]">
-                        Data-driven Insights to Improve Marketing ROI</h3>
+                        ABOUT US</h3>
                     <p
-                        class="text-[#131110] text-[17px] font-normal leading-[30.6px] tracking-[-0.4px] mx-auto md:!m-0 w-[100%] md:w-[70%]">
-                        Genesis integrates customer data from multiple sources, using AI-powered segmentation to deliver
-                        personalized campaigns, guide customer journeys, and re-engage inactive users.
+                        class="text-[#131110] text-[17px] font-normal leading-[30.6px] tracking-[-0.4px] mx-auto md:!m-0 w-[100%] md:w-[100%]">
+                        3D Plug is a pioneering company dedicated to unlocking the full potential of additive manufacturing in the 3D printing industry. Our journey began with a clear vision: to tackle the challenges that have historically limited the adoption of 3D printing and to reshape the manufacturing landscape for businesses across various sectors in Africa.
                     </p>
-                    <a href="#" class="register-link" target="_blank">
-                        <button
-                            class="bg-transparent font-bold flex w-fit mx-auto md:mx-0 !mt-[18px] text-black !px-[16px] !py-[10px] rounded-md border-2 border-black border-solid text-left cursor-pointer">Explore
-                            Genesis platform</button>
-                    </a>
+                    <p
+                        class="text-[#131110] text-[17px] font-normal leading-[30.6px] tracking-[-0.4px] mx-auto md:!m-0 w-[100%] md:w-[100%]">
+                        We are committed to reducing dependence on global supply chains by offering secure and reliable local solutions. One of our core offerings is the production of laboratory consumables and disposables, with a particular focus on medical and pharmaceutical applications.
+                    </p>
+                    <p
+                        class="text-[#131110] text-[17px] font-normal leading-[30.6px] tracking-[-0.4px] mx-auto md:!m-0 w-[100%] md:w-[100%]">
+                        Our team of passionate experts, combined with advanced technology, allows us to make 3D printing more accessible, efficient, and cost-effective than ever. Our solutions empower businesses by equipping them with the necessary tools and capabilities to improve production processes, lower costs, and encourage sustainable practices
+                    </p>
 
                 </div>
 
@@ -155,47 +171,49 @@
             </div>
         </section>
 
-        <section class="max-w-7xl mx-auto px-8 text-center md:text-left pt-0 md:mt-[100px] mt-[10px]">
-            <div class="mx-auto pt-0 pb-16 grid md:grid-cols-3 gap-[32px] md:gap-[32px]">
+        <section class="max-w-7xl mx-auto px-8 text-center md:text-left pt-14 md:mt-[20px] mt-[10px]">
+            <div class="mx-auto pt-0 pb-16 grid md:grid-cols-2 lg:grid-cols-4 gap-15 md:gap-10">
 
                 <div class="flex flex-col items-center text-center">
-
                     <div
                         class="flex rounded-[28px] !border-[8px] !border-[rgba(21,77,210,0.04)] !bg-[rgba(21,77,210,0.05)] w-[58px] h-[58px] p-1 m-1 items-center justify-center mx-auto">
-                        <img src="./3d-icons/pipeline.svg" alt="pipeline" class="flex items-center">
+                        <img src="./3d-icons/design.svg" width="100%" alt="design" class="flex items-center">
                     </div>
                     <p class="text-[#101828] text-[20px] font-medium leading-[30px] tracking-[-0.4px] !mt-[20px]">
-                        Pipeline</p>
+                        Design</p>
                     <p class="text-[#131110] text-center text-[17.86px] font-normal leading-[30.6px] tracking-[-0.4px]">
-                        Send your first-party data to Genesis to centralize customer information from various sources
-                        such as websites, CRM systems, mobile apps, and offline interactions. Genesis ensures
-                        consistency, accuracy, and a holistic customer view.</p>
+                        Bring your ideas to life with custom 3D models created to meet your exact specifications, whether for prototypes, products, or artistic projects.</p>
                 </div>
 
                 <div class="flex flex-col items-center text-center">
                     <div
                         class="flex rounded-[28px] !border-[8px] !border-[rgba(21,77,210,0.04)] !bg-[rgba(21,77,210,0.05)] w-[58px] h-[58px] p-1 m-1 items-center justify-center mx-auto">
-                        <img src="./3d-icons/segment.svg" alt="pipeline" class="flex items-center">
+                        <img src="./3d-icons/build.svg" alt="build" width="100%" class="flex items-center">
                     </div>
                     <p class="text-[#101828] text-[20px] font-medium leading-[30px] tracking-[-0.4px] !mt-[20px]">
-                        Segment</p>
+                        Build</p>
                     <p class="text-[#131110] text-center text-[17.86px] font-normal leading-[30.6px] tracking-[-0.4px]">
-                        By leveraging AI-driven segmentation, you can deliver highly personalized experiences, send
-                        targeted messages at the right time, and optimize customer journeys for better engagement,
-                        retention, and conversion rates.</p>
+                        Transform your designs into reality using high-precision 3D printing technology and premium materials for exceptional results.</p>
                 </div>
 
                 <div class="flex flex-col items-center text-center">
-                    <div
-                        class="flex rounded-[28px] !border-[8px] !border-[rgba(21,77,210,0.04)] !bg-[rgba(21,77,210,0.05)] w-[58px] h-[58px] p-1 m-1 items-center justify-center mx-auto">
-                        <img src="./3d-icons/engage.svg" alt="pipeline" class="flex items-center">
+                    <div class="flex rounded-[28px] !border-[8px] !border-[rgba(21,77,210,0.04)] !bg-[rgba(21,77,210,0.05)] w-[58px] h-[58px] p-1 m-1 items-center justify-center mx-auto">
+                        <img src="./3d-icons/consult.svg" width="100%" alt="pipeline" class="flex items-center">
                     </div>
-                    <p class="text-[#101828] text-[20px] font-medium leading-[30px] tracking-[-0.4px] !mt-[20px]">Engage
+                    <p class="text-[#101828] text-[20px] font-medium leading-[30px] tracking-[-0.4px] !mt-[20px]">Consult
                     </p>
                     <p class="text-[#131110] text-center text-[17.86px] font-normal leading-[30.6px] tracking-[-0.4px]">
-                        Create targeted campaigns and automate messaging based on triggers like user actions, behavior,
-                        and milestones. Ensure timely, personalized communication to enhance engagement, and drive
-                        conversions effortlessly.</p>
+                        Receive expert guidance on materials, design optimization, and production strategies to ensure your project’s success.</p>
+                </div>
+
+                <div class="flex flex-col items-center text-center">
+                    <div class="flex rounded-[28px] !border-[8px] !border-[rgba(21,77,210,0.04)] !bg-[rgba(21,77,210,0.05)] w-[58px] h-[58px] p-1 m-1 items-center justify-center mx-auto">
+                        <img src="./3d-icons/maintain.svg" width="100%" alt="pipeline" class="flex items-center">
+                    </div>
+                    <p class="text-[#101828] text-[20px] font-medium leading-[30px] tracking-[-0.4px] !mt-[20px]">Maintain
+                    </p>
+                    <p class="text-[#131110] text-center text-[17.86px] font-normal leading-[30.6px] tracking-[-0.4px]">
+                        Keep your printed products performing at their best with our repair, refinement, and ongoing support services.</p>
                 </div>
             </div>
         </section>
@@ -304,29 +322,27 @@
     <div class="bg-[#FFF] flex justify-center items-center min-h-screen mt-[80px]" id="howitworks">
         <div class="w-full max-w-7xl bg-[#FFF] p-6">
             <div class="text-center mb-6">
-                <p class="text-[#131110] text-center text-[16px] font-medium leading-[23px] !mb-[12px]">How It Works</p>
-                <h2
-                    class="text-[#131110] text-center w-[90%] md:w-[50%] !text-[40px] font-medium leading-[42px] tracking-[-2px] !mb-[20px] mx-auto">
-                    Seamless Data Integration, Smart Segmentation, and Automated Engagement</h2>
+                <p class="text-[#131110] text-center text-[16px] font-medium leading-[23px] !mb-[12px]">Industries We Serve</p>
+                <h2 class="text-[#131110] text-center w-[90%] md:w-[60%] !text-[40px] font-medium leading-[42px] tracking-[-1px] !mb-[20px] mx-auto">
+                    We deliver tailored, sustainable solutions that boost innovation and efficiency across industries.
+                </h2>
             </div>
-            <div class="mt-[20px] md:mt-[80px] grid !gap-[37px]">
-                <div class="grid md:!grid-cols-[7fr_5fr] !grid-cols-[12fr] gap-[90px]">
 
-                    <!-- <div class="rounded-[20px] !bg-[#F3F4FF] !border border-solid !border-[#D6DEFA] grid gap-[8px] !p-[30px] flex justify-center items-center"> -->
-                    <img src="./3d-images/customer-data.svg" alt="customer">
-                    <!-- </div> -->
+            <div class="mt-[20px] md:mt-[80px] grid !gap-[37px]">
+                <div class="grid md:!grid-cols-[6fr_6fr] !grid-cols-[12fr] gap-[90px]">
+
+                    <img src="./3d-images/works-1.jpg" alt="customer">
 
                     <div class="space-y-4">
                         <div class="border-b border-t py-7">
                             <details class="group">
                                 <summary
                                     class="text-[#131110] !text-[23px] font-medium leading-[27.6px] tracking-[-0.5px]  flex justify-between items-center cursor-pointer">
-                                    Connect your Data
+                                    Geosciences
                                     <img class="toggle-sign" src="./3d-icons/arrow-up.svg" alt="Toggle Icon" width="15"
                                         height="15">
                                 </summary>
-                                <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Integrate
-                                    your first-party data from websites, CRM systems, mobile apps, and offline sources.
+                                <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Enhance your geoscience capabilities with precise geological models, topographic maps, and terrain replicas from 3D Plug. Our solutions deliver valuable insights for fields such as Geology, Oil and Gas, Chemistry, and Environmental Science, facilitating informed decision-making and fostering sustainable resource management. Unlocking new insights into the natural world today.
                                 </p>
                             </details>
                         </div>
@@ -335,13 +351,11 @@
                             <details class="group">
                                 <summary
                                     class="text-[#131110] !text-[23px] font-medium leading-[27.6px] tracking-[-0.5px] flex justify-between items-center cursor-pointer">
-                                    Process & Organise
+                                    Mining
                                     <img class="toggle-sign" src="./3d-icons/arrow-up.svg" alt="Toggle Icon" width="15"
                                         height="15">
                                 </summary>
-                                <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Yes, we
-                                    can. Our AI cleans, structures, and enriches your data, ensuring accuracy and
-                                    consistency across all customer touchpoints.</p>
+                                <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Boost your operational efficiency and sustainability with our technology, which allows for on-site production of spare parts and customized components. By streamlining processes, we help companies significantly reduce production costs. Partner with us to drive innovation while cutting expenses and maximizing productivity in your mining operations.</p>
                             </details>
                         </div>
 
@@ -349,13 +363,12 @@
                             <details class="group">
                                 <summary
                                     class="text-[#131110] !text-[23px] font-medium leading-[27.6px] tracking-[-0.5px] flex justify-between items-center cursor-pointer">
-                                    Segment your Audience
+                                    Power and Energy
+
                                     <img class="toggle-sign" src="./3d-icons/arrow-up.svg" alt="Toggle Icon" width="15"
                                         height="15">
                                 </summary>
-                                <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Using
-                                    AI-driven analysis, Genesis identifies patterns in customer behaviour and
-                                    attributes, creating dynamic audience segments for precise targeting.</p>
+                                <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Our advanced 3D printing technology enables businesses to optimize processes by facilitating rapid prototyping, creating custom tooling, and supporting low-volume production runs. With our solutions, companies can develop complex components and parts with exceptional precision, resulting in faster turnaround times and improved operational efficiency.</p>
                             </details>
                         </div>
 
@@ -363,13 +376,11 @@
                             <details class="group">
                                 <summary
                                     class="text-[#131110] !text-[23px] font-medium leading-[27.6px] tracking-[-0.5px] flex justify-between items-center cursor-pointer">
-                                    Automate Engagement
+                                    Healthcare
                                     <img class="toggle-sign" src="./3d-icons/arrow-up.svg" alt="Toggle Icon" width="15"
                                         height="15">
                                 </summary>
-                                <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Set up
-                                    automated workflows that trigger personalized messages based on customer actions,
-                                    lifecycle stages, or engagement levels.</p>
+                                <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">By leveraging 3D printing, we offer efficient, sustainable, and cost-effective solutions, addressing the growing demand for locally sourced products in Africa.</p>
                             </details>
                         </div>
 
@@ -377,18 +388,26 @@
                             <details class="group">
                                 <summary
                                     class="text-[#131110] !text-[23px] font-medium leading-[27.6px] tracking-[-0.5px] flex justify-between items-center cursor-pointer">
-                                    Track & Optimize
+                                    Education
                                     <img class="toggle-sign" src="./3d-icons/arrow-up.svg" alt="Toggle Icon" width="15"
                                         height="15">
                                 </summary>
-                                <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Monitor
-                                    campaign performance and customer interactions in real time. Use AI-powered insights
-                                    to refine strategies and maximize results.</p>
+                                <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Empower learning with additive manufacturing solutions that provide hands-on experiences and visualization tools, enhancing interactive learning and research opportunities for students.</p>
                             </details>
                         </div>
 
+                        <div class="border-b py-7">
+                            <details class="group">
+                                <summary
+                                    class="text-[#131110] !text-[23px] font-medium leading-[27.6px] tracking-[-0.5px] flex justify-between items-center cursor-pointer">
+                                    Consumer Products
+                                    <img class="toggle-sign" src="./3d-icons/arrow-up.svg" alt="Toggle Icon" width="15"
+                                        height="15">
+                                </summary>
+                                <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Provide personalized and distinctive consumer products that cater to customization and niche market opportunities, enhancing customer satisfaction and engagement through tailored offerings.</p>
+                            </details>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -402,9 +421,9 @@
                 <p class="text-[#131110] text-center text-[16px] font-medium leading-[23px] !mb-[12px]">
                     Genesis for Industries
                 </p>
-                <h2
-                    class="text-[#131110] text-center w-[90%] md:w-[40%] !text-[40px] font-medium leading-[42px] tracking-[-2px] !mb-[5px] mx-auto">
-                    Driving Impact across Industries</h2>
+                <h2 class="text-[#131110] text-center w-[90%] md:w-[40%] !text-[40px] font-medium leading-[42px] tracking-[-2px] !mb-[5px] mx-auto">
+                    Driving Impact across Industries
+                </h2>
             </div>
             <div class="mt-[20px] grid !gap-[37px]">
                 <div class="grid md:!grid-cols-[6fr_6fr] !grid-cols-[12fr] gap-[24px]">
@@ -414,20 +433,19 @@
                         <div class="p-[12px] bg-[#131110] rounded-[10px] w-[48px] h-[48px]">
                             <img src="./3d-icons/services.svg" alt="services">
                         </div>
-                        <h4 class="!text-[20px] font-bold text-[#101828] !mt-[13px]">Financial Services</h4>
-                        <p class="text-[#131110] !text-[18px] font-normal leading-[30.6px] tracking-[-0.4px]">Engage
-                            customers with personalized financial experiences and automated communications.</p>
+                        <h4 class="!text-[20px] font-bold text-[#101828] !mt-[13px]">On-Demand Manufacturing</h4>
+                        <p class="text-[#131110] !text-[18px] font-normal leading-[30.6px] tracking-[-0.4px]">Simplify your production process with our quick, hassle-free 3D printing services.</p>
                         <div class="flex gap-[8px] items-center mt-[13px]">
                             <img src="./3d-icons/check.svg" alt="check">
-                            <p class="text-[#475467]">Onboard users with tailored financial guidance</p>
+                            <p class="text-[#475467]">Upload digital designs and receive ready-to-use products without owning a printer.</p>
                         </div>
                         <div class="flex gap-[8px] items-center">
                             <img src="./3d-icons/check.svg" alt="check">
-                            <p class="text-[#475467]">Automate fraud alerts and compliance updates</p>
+                            <p class="text-[#475467]">Eliminate upfront costs and complex production management.</p>
                         </div>
                         <div class="flex gap-[8px] items-center">
                             <img src="./3d-icons/check.svg" alt="check">
-                            <p class="text-[#475467]">Boost product adoption with AI-driven personalization</p>
+                            <p class="text-[#475467]">Enjoy fast, on-demand delivery of customized objects.</p>
                         </div>
                     </div>
                     <div
@@ -435,20 +453,19 @@
                         <div class="p-[12px] bg-[#131110] rounded-[10px] w-[48px] h-[48px]">
                             <img src="./3d-icons/business.svg" alt="services">
                         </div>
-                        <h4 class="!text-[20px] font-bold text-[#101828] !mt-[13px]">Retail Business</h4>
-                        <p class="text-[#131110] !text-[18px] font-normal leading-[30.6px] tracking-[-0.4px]">Enhance
-                            customer journeys with seamless omnichannel engagement.</p>
+                        <h4 class="!text-[20px] font-bold text-[#101828] !mt-[13px]">Design & Prototype</h4>
+                        <p class="text-[#131110] !text-[18px] font-normal leading-[30.6px] tracking-[-0.4px]">Turn complex concepts into reality with our advanced design and prototyping solutions.</p>
                         <div class="flex gap-[8px] items-center mt-[13px]">
                             <img src="./3d-icons/check.svg" alt="check">
-                            <p class="text-[#475467]">Personalize offers across digital and physical stores</p>
+                            <p class="text-[#475467]">Transform intricate designs into physical models using 3D printing.</p>
                         </div>
                         <div class="flex gap-[8px] items-center">
                             <img src="./3d-icons/check.svg" alt="check">
-                            <p class="text-[#475467]">Improve retention with lifecycle-driven messaging</p>
+                            <p class="text-[#475467]">Work with diverse materials, from polymers to metals.</p>
                         </div>
                         <div class="flex gap-[8px] items-center">
                             <img src="./3d-icons/check.svg" alt="check">
-                            <p class="text-[#475467]">Amplify customer experience with product recommendations</p>
+                            <p class="text-[#475467]">Push innovation boundaries in product development.</p>
                         </div>
                     </div>
                     <div
@@ -456,21 +473,20 @@
                         <div class="p-[12px] bg-[#131110] rounded-[10px] w-[48px] h-[48px]">
                             <img src="./3d-icons/fmc.svg" alt="services">
                         </div>
-                        <h4 class="!text-[20px] font-bold text-[#101828] !mt-[13px]">FMCG</h4>
-                        <p class="text-[#131110] !text-[18px] font-normal leading-[30.6px] tracking-[-0.4px]">Enhance
-                            customer experience with data-driven marketing for targeted promotions and lasting loyalty.
+                        <h4 class="!text-[20px] font-bold text-[#101828] !mt-[13px]">Low-Volume Manufacturing</h4>
+                        <p class="text-[#131110] !text-[18px] font-normal leading-[30.6px] tracking-[-0.4px]">Create personalized products efficiently with our small-batch manufacturing services.
                         </p>
                         <div class="flex gap-[8px] items-center mt-[13px]">
                             <img src="./3d-icons/check.svg" alt="check">
-                            <p class="text-[#475467]">Send personalized offers based on purchase behavior</p>
+                            <p class="text-[#475467]">Tailor products to customer preferences and specifications.</p>
                         </div>
                         <div class="flex gap-[8px] items-center">
                             <img src="./3d-icons/check.svg" alt="check">
-                            <p class="text-[#475467]">Collect and act on real-time customer feedback</p>
+                            <p class="text-[#475467]">Leverage 3D printing for flexible, scalable production.</p>
                         </div>
                         <div class="flex gap-[8px] items-center">
                             <img src="./3d-icons/check.svg" alt="check">
-                            <p class="text-[#475467]">Automate loyalty programs to reward repeat customers</p>
+                            <p class="text-[#475467]">Offer unique, high-quality items at competitive costs.</p>
                         </div>
                     </div>
                     <div
@@ -478,21 +494,19 @@
                         <div class="p-[12px] bg-[#131110] rounded-[10px] w-[48px] h-[48px]">
                             <img src="./3d-icons/utilities.svg" alt="services">
                         </div>
-                        <h4 class="!text-[20px] font-bold text-[#101828] !mt-[13px]">Utilities</h4>
-                        <p class="text-[#131110] !text-[18px] font-normal leading-[30.6px] tracking-[-0.4px]">Streamline
-                            communication, improve service transparency, and deliver timely updates for better customer
-                            engagement.</p>
+                        <h4 class="!text-[20px] font-bold text-[#101828] !mt-[13px]">Post-Processing & Finishing</h4>
+                        <p class="text-[#131110] !text-[18px] font-normal leading-[30.6px] tracking-[-0.4px]">Enhance both function and appearance with our professional finishing services.</p>
                         <div class="flex gap-[8px] items-center mt-[13px]">
                             <img src="./3d-icons/check.svg" alt="check">
-                            <p class="text-[#475467]">Send real-time outage and maintenance alerts</p>
+                            <p class="text-[#475467]">Improve surface quality through smoothing and polishing.</p>
                         </div>
                         <div class="flex gap-[8px] items-center">
                             <img src="./3d-icons/check.svg" alt="check">
-                            <p class="text-[#475467]">Automate billing reminders and payment updates</p>
+                            <p class="text-[#475467]">Apply colors, textures, and protective coatings.</p>
                         </div>
                         <div class="flex gap-[8px] items-center">
                             <img src="./3d-icons/check.svg" alt="check">
-                            <p class="text-[#475467]">Educate customers with personalized service insights</p>
+                            <p class="text-[#475467]">Assemble and fine-tune parts for final use.</p>
                         </div>
                     </div>
                 </div>
@@ -500,89 +514,26 @@
         </div>
     </div>
 
-
-    <!-- OUR BLOG -->
-    <!-- <div class="bg-white" id="resources">
-            <section class="text-center max-w-7xl mx-auto pt-[32px] pb-[50px] md:pb-[100px] px-[24px] !mt-[60px] md!mt-[160px]">
-                <div class="text-center mb-6">
-                    <p class="text-[#131110] text-center text-[16px] font-medium leading-[23px] !mb-[12px]">
-                        Resources
-                        </p>
-                    <h2 class="text-[#131110] text-center w-[90%] md:w-[50%] !text-[40px] font-medium leading-[42px] tracking-[-2px] !mb-[20px] mx-auto">Most Read Guides</h2>
-                </div>
-                <div class="grid md:grid-cols-3 gap-8 md:gap-6 mt-10 px-6 md:px-0">
-                    <div>
-                        <img src="./3d-images/blog-1.svg" alt="Blog Image" class="rounded-md mb-4 w-full">
-                        <p class="text-[#131110] !text-[10px] font-medium leading-[11px] tracking-[0.4px] uppercase text-left px-[15px] py-[7px]  !border-2 border-solid !border-[#131110] rounded-[100px] bg-[#fff] w-fit">cx</p>
-                        <h3 class="text-[#101828] !text-[22px] font-semibold leading-[32px] my-2 text-left">10 CX mistakes hiding in
-                            plain sight</h3>
-                        <p class="text-[#131110] !text-[16px] font-normal leading-[23px] tracking-[-0.2px] text-left w-[85%]">When you nip these common CX mistakes
-                            in the bud, you’ll not only improve your
-                            immediate CX metrics, but set your team
-                            up for future success by building customer
-                            trust and loyalty.</p>
-                        
-                        <a href="blog-content.html" class="text-blue-600 font-semibold mt-4 block">
-                            <button class="flex gap-2 !text-[12px] items-center rounded-[5px] !bg-[#fff] text-black text-left"> READ MORE <img src="./3d-icons/arrow-right.svg" alt="arrow"> </button></a>
-                    </div>
-                    
-                    <div>
-                        <img src="./3d-images/blog-2.svg" alt="Blog Image" class="rounded-md mb-4 w-full">
-                        <p class="text-[#131110] !text-[10px] font-medium leading-[11px] tracking-[0.4px] uppercase text-left px-[15px] py-[7px]  !border-2 border-solid !border-[#131110] rounded-[100px] bg-[#fff] w-fit">Journey management</p>
-                        <h3 class="text-[#101828] !text-[22px] font-semibold leading-[32px] my-2 text-left">6 strategies to conduct
-                            interviews that uncover the
-                            customer journey</h3>
-                        <p class="text-[#131110] !text-[16px] font-normal leading-[23px] tracking-[-0.2px] text-left w-[85%]">Learn how to create a journey-generating
-                            conversation with your customers. Design
-                            interview questions and learn techniques
-                            that uncover your customer’s hidden needs.</p>
-                        
-                        <a href="blog-content.html" class="text-blue-600 font-semibold mt-4 block">
-                            <button class="flex gap-2 !text-[12px] py-0 justify-center items-center rounded-[5px] !bg-[#fff] text-black">  READ MORE <img src="./3d-icons/arrow-right.svg" alt="arrow"> </button></a>
-                    </div>
-                    
-                    <div>
-                        <img src="./3d-images/blog-3.svg" alt="Blog Image" class="rounded-md mb-4 w-full">
-                        <p class="text-[#131110] !text-[10px] font-medium leading-[11px] tracking-[0.4px] uppercase text-left px-[15px] py-[7px]  !border-2 border-solid !border-[#131110] rounded-[100px] bg-[#fff] w-fit">Journey management</p>
-
-                        <h3 class="text-[#101828] !text-[22px] font-semibold leading-[32px] my-2 text-left">6 Tips for Creating
-                            Successful Opportunities</h3>
-                        <p class="text-[#131110] !text-[16px] font-normal leading-[23px] tracking-[-0.2px] text-left w-[85%]">Creating a strong compliance program is not just about checking boxes; it’s about embedding a culture of compliance into the fabric of your organization. Golden Compliance specializes in designing and...</p>
-                        
-                        <a href="blog-content.html" class="text-blue-600 font-semibold mt-4 block">
-                            <button class="flex !text-[12px] py-0 justify-center items-center rounded-[5px] gap-2 !bg-[#fff] text-black"> READ MORE <img src="./3d-icons/arrow-right.svg" alt="arrow"> </button>
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </div> -->
-
     <!-- AELLA MFB -->
     <div class=" py-10 md:px-6 px-4 bg-black mt-10 md:mt-35">
         <div class="bg-black text-white rounded-xl overflow-hidden flex flex-col md:flex-row max-w-7xl w-full mx-auto">
 
             <div class="md:p-8 p-6 flex-1">
                 <h2 class=" text-white !text-[38px] font-medium leading-[42px] tracking-[-2px] w-[100%] md:w-[70%]">
-                    Aella Mfb drives financial inclusion with personalized customer engagement</h2>
-                <p class="text-white !text-[18px] font-normal leading-[27px] tracking-[-1px] !mt-[30px] w-[90%]">Through
-                    personalized communication and data-driven outreach, Aella microfinance bank achieved a significant
-                    increase in customer acquisition and engagement, empowering underserved communities with seamless
-                    financial services.</p>
+                    Best Choice for Your 3D Printing Needs</h2>
+                <p class="text-white !text-[18px] font-normal leading-[27px] tracking-[-1px] !mt-[30px] w-[90%]">Through precision design, cutting-edge technology, and customer-focused service, we deliver high-quality 3D printing solutions that bring your ideas to life, from prototypes to production.</p>
                 <div class="flex mt-6 space-x-8">
                     <div>
-                        <p class="text-white !text-[34px] font-medium leading-[42px] tracking-[-2px]">65%</p>
-                        <p class="text-[#ECEAEA99] !text-[14px] font-normal leading-[19px] tracking-[-0.2px] ">Increase
-                            in customer retention</p>
+                        <p class="text-white !text-[34px] font-medium leading-[42px] tracking-[-2px]">65k</p>
+                        <p class="text-[#ECEAEA99] !text-[14px] font-normal leading-[19px] tracking-[-0.2px] ">Satisfied Client</p>
                     </div>
                     <div>
-                        <p class="text-white !text-[38px] font-medium leading-[42px] tracking-[-2px]">40%</p>
-                        <p class="text-[#ECEAEA99] !text-[14px] font-normal leading-[19px] tracking-[-0.2px] ">Reduction
-                            in customer churn</p>
+                        <p class="text-white !text-[38px] font-medium leading-[42px] tracking-[-2px]">40k</p>
+                        <p class="text-[#ECEAEA99] !text-[14px] font-normal leading-[19px] tracking-[-0.2px] ">Successful project</p>
                     </div>
                     <div>
-                        <p class="text-white !text-[38px] font-medium leading-[42px] tracking-[-2px]">3x</p>
-                        <p class="text-[#ECEAEA99] !text-[14px] font-normal leading-[19px] tracking-[-0.2px]">Faster
-                            loan approvals</p>
+                        <p class="text-white !text-[38px] font-medium leading-[42px] tracking-[-2px]">3+</p>
+                        <p class="text-[#ECEAEA99] !text-[14px] font-normal leading-[19px] tracking-[-0.2px]">Years of experience</p>
                     </div>
                 </div>
             </div>
@@ -592,13 +543,12 @@
 
                 </div>
                 <div class="relative w-full">
-                    <img src="./3d-images/aella.svg" alt="Customer engagement" class="h-full w-full object-cover" />
+                    <img src="./3d-images/how-it-works2.jpg" alt="Customer engagement" class="h-full w-full object-cover rounded-tl-[250px]" />
                 </div>
             </div>
 
         </div>
     </div>
-
 
     <!-- FAQS -->
     <div class="flex items-center justify-center bg-white text-black pt-[96px] mb-[45px] md:mb-[186px]">
@@ -606,13 +556,12 @@
             <div class="text-center mb-6">
                 <div
                     class="text-[#131110] flex gap-[10px] items-center justify-center text-center text-[16px] font-medium leading-[23px] !mb-[30px]">
-                    <img src="./3d-icons/logo.svg" alt="GCS Logo" class="h-8">
-                    <p>FAQs</p>
+                    <p class="!text-[20px] font-bold">FAQs</p>
                 </div>
 
                 <h2
                     class="text-[#131110] text-center w-[90%] md:w-[70%] !text-[40px] font-medium leading-[42px] tracking-[-2px] !mb-[20px] mx-auto">
-                    Everything you need to know about the product and billing.</h2>
+                    Everything you need to know about us</h2>
             </div>
 
             <div class="space-y-4">
@@ -620,13 +569,11 @@
                     <details class="group">
                         <summary
                             class="text-[#131110] !text-[18px] font-medium leading-[27.6px] tracking-[-0.5px]  flex justify-between items-center cursor-pointer">
-                            Is there a free trial available?
+                            What types of projects can you design?
                             <img class="faq-toggle-sign" src="./3d-icons/plus.svg" alt="Toggle Icon" width="22"
                                 height="22">
                         </summary>
-                        <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Yes, you can try
-                            us for free for 30 days. If you want, we’ll provide you with a free, personalized 30-minute
-                            onboarding call to get you up and running as soon as possible.</p>
+                        <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">We can create custom 3D designs for prototypes, functional parts, product models, architectural elements, art pieces, and more, based on your exact requirements.</p>
                     </details>
                 </div>
 
@@ -634,13 +581,12 @@
                     <details class="group">
                         <summary
                             class="text-[#131110] !text-[18px] font-medium leading-[27.6px] tracking-[-0.5px] flex justify-between items-center cursor-pointer">
-                            Can I change my plan later?
+                            Do I need to have a design ready before working with you?
                             <img class="faq-toggle-sign" src="./3d-icons/plus.svg" alt="Toggle Icon" width="22"
                                 height="22">
                         </summary>
                         <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Yes, we can. Our
-                            AI cleans, structures, and enriches your data, ensuring accuracy and consistency across all
-                            customer touchpoints.</p>
+                            Not at all, our team can start from your idea, sketch, or concept and develop a professional 3D model for printing.</p>
                     </details>
                 </div>
 
@@ -648,13 +594,11 @@
                     <details class="group">
                         <summary
                             class="text-[#131110] !text-[18px] font-medium leading-[27.6px] tracking-[-0.5px] flex justify-between items-center cursor-pointer">
-                            What is your cancellation policy?
+                            What materials do you use for 3D printing?
                             <img class="faq-toggle-sign" src="./3d-icons/plus.svg" alt="Toggle Icon" width="22"
                                 height="22">
                         </summary>
-                        <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Using AI-driven
-                            analysis, Genesis identifies patterns in customer behaviour and attributes, creating dynamic
-                            audience segments for precise targeting.</p>
+                        <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">We offer a variety of materials, including PLA, ABS, PETG, resin, and specialty filaments, chosen to match your project’s purpose and durability needs.</p>
                     </details>
                 </div>
 
@@ -662,13 +606,11 @@
                     <details class="group">
                         <summary
                             class="text-[#131110] !text-[18px] font-medium leading-[27.6px] tracking-[-0.5px] flex justify-between items-center cursor-pointer">
-                            Can other info be added to an invoice?
+                            How long does it take to complete a 3D printing project?
                             <img class="faq-toggle-sign" src="./3d-icons/plus.svg" alt="Toggle Icon" width="22"
                                 height="22">
                         </summary>
-                        <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Set up automated
-                            workflows that trigger personalized messages based on customer actions, lifecycle stages, or
-                            engagement levels.</p>
+                        <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Project timelines vary depending on size, complexity, and finishing requirements, but most orders are completed within a few days to a week.</p>
                     </details>
                 </div>
 
@@ -676,13 +618,11 @@
                     <details class="group">
                         <summary
                             class="text-[#131110] !text-[18px] font-medium leading-[27.6px] tracking-[-0.5px] flex justify-between items-center cursor-pointer">
-                            How does billing work?
+                            Can you help me improve an existing 3D design?
                             <img class="faq-toggle-sign" src="./3d-icons/plus.svg" alt="Toggle Icon" width="22"
                                 height="22">
                         </summary>
-                        <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Monitor campaign
-                            performance and customer interactions in real time. Use AI-powered insights to refine
-                            strategies and maximize results.</p>
+                        <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Yes, through our consultation services, we can review, optimize, and modify your existing files for better strength, aesthetics, or print efficiency.</p>
                     </details>
                 </div>
 
@@ -690,13 +630,11 @@
                     <details class="group">
                         <summary
                             class="text-[#131110] !text-[18px] font-medium leading-[27.6px] tracking-[-0.5px] flex justify-between items-center cursor-pointer">
-                            How do I change my account email?
+                            Do you offer post-print maintenance or repairs?
                             <img class="faq-toggle-sign" src="./3d-icons/plus.svg" alt="Toggle Icon" width="22"
                                 height="22">
                         </summary>
-                        <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Monitor campaign
-                            performance and customer interactions in real time. Use AI-powered insights to refine
-                            strategies and maximize results.</p>
+                        <p class="text-[#131110] !text-[16px] font-normal leading-[24px] w-[95%] mt-7">Absolutely, we can smooth, repair, reprint, or upgrade parts to ensure they stay functional and in top condition over time.</p>
                     </details>
                 </div>
 
@@ -707,20 +645,19 @@
     <!-- READY TO UNLOCK -->
     <div class="bg-[#F3F4FF] py-[100px]">
         <div class="max-w-7xl grid item-center justify-center mx-auto">
-            <h3 class="text-[#131110] text-center !text-[40px] font-medium leading-[42px] tracking-[-2px] !mb-11">
-                Ready to unlock the power of your customer data?
+            <h3 class="text-[#131110] text-center !text-[40px] font-medium leading-[42px] tracking-[-2px] !mb-4">
+                Get your ideas into the real world with 3D-Plug today!
             </h3>
+
+            <p class="text-[#131110] text-center !text-[20px] tracking-[-2px] !mb-6 w-[70%] mx-auto">
+                Welcome to 3D-Plug, where we transform your ideas into reality. We are committed to provide a range of services.
+            </p>
 
             <div class="flex justify-center gap-3 pb-[53px] font-bold">
                 <a href="#">
                     <button
                         class="flex bg-black !text-[#fff] !px-[20px] !py-[10px] rounded-md border-2 border-black border-solid">
-                        Request a demo</button>
-                </a>
-                <a href="#" class="register-link" target="_blank">
-                    <button
-                        class=" flex bg-transparent text-black !px-[26px] !py-[10px] rounded-md border-2 border-black border-solid">Get
-                        started</button>
+                        Get an instant quote</button>
                 </a>
             </div>
         </div>
@@ -794,6 +731,15 @@
     </footer>
 
     <script>
+    // Wiggle the button every 2 seconds
+    document.addEventListener("DOMContentLoaded", function () {
+        const btn = document.querySelector('.wiggle-btn');
+        setInterval(() => {
+            btn.classList.remove('wiggle-btn');
+            void btn.offsetWidth; // trigger reflow
+            btn.classList.add('wiggle-btn');
+        }, 2000);
+    });
         const hamburger = document.getElementById('hamburger');
         const dropdownMenu = document.querySelector('.dropdown-menu');
         const hamburgerIcon = document.getElementById('hamburger-icon');
