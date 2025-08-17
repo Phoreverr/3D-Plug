@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <title>3D-Plug About</title>
+
+</head>
+
+<body style="font-family: 'Inter', sans-serif;" class="text-black">
+
+    <!-- NAVBAR -->
+    <nav class="!bg-[#fff] fixed top-0 w-full z-50">
+        <div class="max-w-[1250px] mx-auto">
+            <div class="flex justify-between items-center !px-[20px] !py-[20px]">
+                <div class="flex text-[15.75px] font-extrabold leading-[17.6px]">
+
+                    <a href="#" class="flex gap-0 items-center">
+                        <img src="./3d-icons/3DPlug-logo.png" alt="GCS Logo" class="!h-[70px]">
+                    </a>
+                </div>
+
+                <div class="hamburger cursor-pointer lg:hidden" id="hamburger">
+                    <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none"
+                        viewBox="0 0 24 24" stroke="black">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                    <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 hidden" fill="none"
+                        viewBox="0 0 24 24" stroke="black">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </div>
+
+                <div class="menu hidden lg:flex gap-[59px] font-medium text-black ml-30">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="services.html">Services</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+
+                <div class="hidden lg:flex gap-[10px]">
+                    <a href="#" class="register-link" target="_blank">
+                        <button
+                            class="hidden lg:flex !bg-[#D20F4B] !border-[#D20F4B] border-2 font-bold !text-[#fff] !px-[28px] !py-[12px] rounded-md wiggle-btn">Get
+                            Started</button>
+                        <style>
+                            @keyframes wiggle {
+
+                                0%,
+                                100% {
+                                    transform: rotate(0deg);
+                                }
+
+                                10% {
+                                    transform: rotate(-7deg);
+                                }
+
+                                20% {
+                                    transform: rotate(7deg);
+                                }
+
+                                30% {
+                                    transform: rotate(-7deg);
+                                }
+
+                                40% {
+                                    transform: rotate(7deg);
+                                }
+
+                                50% {
+                                    transform: rotate(0deg);
+                                }
+                            }
+
+                            .wiggle-btn {
+                                display: inline-flex;
+                                animation: wiggle 0.5s ease-in-out;
+                                animation-iteration-count: 1;
+                            }
+                        </style>
+                    </a>
+                </div>
+
+                <div
+                    class="dropdown-menu hidden flex-col absolute top-[100px] pl-[20px] left-0 bg-white shadow-lg w-full z-10 !bg-[#fff] text-black">
+                    <a href="index.html" class="px-4 py-2 hover:bg-gray-200">Home</a>
+                    <a href="about.html" class="px-4 py-2 hover:bg-gray-200">About Us</a>
+                    <a href="services.html" class="px-4 py-2 hover:bg-gray-200">Services</a>
+                    <a href="contact.html" class="px-4 py-2 hover:bg-gray-200">Contact</a>
+
+                    <div class="flex font-medium p-3 flex-row gap-1 items-center">
+                        <a href="#" class="register-link" target="_blank">
+                            <button
+                                class=" !bg-[#D20F4B] !border-[#D20F4B] border-2 font-bold !text-[#fff] !px-[28px] !py-[15px] rounded-md">Get
+                                Started</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <div class="text-center h-[550px] flex items-center ml-0 bg-cover bg-center bg-no-repeat 
+            bg-[linear-gradient(to_right,rgba(0,0,0,0.9),rgba(0,0,0,0)),url('./3d-images/about-us.png')]">
+        <div class="max-w-7xl mx-auto text-white text-left w-full p-[20px] relative">
+            <div
+                class="flex items-center space-x-5 text-left !text-[16px] font-medium leading-[12px] tracking-[1px] uppercase">
+                <a href="index.html">HOME</a>
+                <img src="./3d-icons/arrow-right.svg" alt="arrow-right">
+                <p>ABOUT US</p>
+            </div>
+            <h1
+                class="text-left font-archivo !text-[56px] !mt-[14px] font-bold leading-[53.9px] tracking-[-1.5px] capitalize">
+                About Us
+            </h1>
+        </div>
+    </div>
+
+<!-- WHO WE ARE -->
+    <div class="bg-white" id="features">
+        <!-- WHO WE ARE -->
+        <div class="bg-white-100">
+            <div class="max-w-7xl mx-auto px-9 pt-[50px] !pb-[30px] md:py-[148px]">
+                <div class="flex flex-col lg:flex-row items-center lg:items-start gap-[100px]">
+
+                    <!-- Content Section -->
+                    <div class="w-full lg:w-1/2">
+                        <h4 class="text-600 font-bold uppercase text-sm !mb-[14px]" style="color: #d20f4b;">Who We Are
+                        </h4>
+                        <h2 class="font-bold !text-[38px] leading-[41.8px] tracking[-1px]" style="color: #181818;">We
+                            work with you to make your vision a reality</h2>
+                        <p class="text-600 mt-4" style="color: #515151;">
+                            3D Plug is a pioneering company dedicated to unlocking the full potential of additive
+                            manufacturing in the 3D printing industry. Our journey began with a clear vision: to tackle
+                            the challenges that have historically limited the adoption of 3D printing and to reshape the
+                            manufacturing landscape for businesses across various sectors in Africa.
+                        </p>
+
+                        <div class="mt-[18px]">
+                            <h3 class="font-bold text-lg">Our commitments</h3>
+                            <p class="text-600" style="color: #515151;">We are committed to reducing dependence on
+                                global supply chains by offering secure and reliable local solutions. One of our core
+                                offerings is the production of laboratory consumables and disposables, with a particular
+                                focus on medical and pharmaceutical applications.</p>
+                        </div>
+
+                        <div class="mt-4 border-t pt-4">
+                            <h3 class="font-bold text-lg">Our focus</h3>
+                            <p class="text-gray-600" style="color: #515151;">Our team of passionate experts, combined
+                                with advanced technology, allows us to make 3D printing more accessible, efficient, and
+                                cost-effective than ever. Our solutions empower businesses by equipping them with the
+                                necessary tools and capabilities to improve production processes, lower costs, and
+                                encourage sustainable practices</p>
+                        </div>
+                    </div>
+
+                    <div class="w-full lg:w-1/2 flex justify-center items-center h-full my-auto">
+                        <img src="./3d-images/who-we-are.png" alt="who-we-are"
+                            class="w-full lg:w-auto rounded-lg shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- OUR MISSION -->
+    <div class="bg-white">
+       
+        <div class="bg-white-100">
+            <div class="max-w-7xl mx-auto px-9 pt-[50px] !pb-[30px] md:py-[148px]">
+                <div class="flex flex-col lg:flex-row items-center lg:items-start gap-[100px]">
+
+
+
+                    <div class="w-full lg:w-1/2 flex justify-center items-center h-full my-auto">
+                        <img src="./3d-images/mission.jpg" alt="mission" class="w-full lg:w-auto rounded-lg shadow-lg">
+                    </div>
+
+                    <!-- Content Section -->
+                    <div class="w-full lg:w-1/2">
+                        <h2 class="font-bold !text-[38px] leading-[41.8px] tracking[-1px]" style="color: #181818;">OUR
+                            MISSION</h2>
+                        <p class="text-600 mt-4" style="color: #515151;">
+                            Our mission is clear and ambitious: to deliver customized, sustainable, and high-quality 3D
+                            printing models and prototypes.
+                            We empower businesses to optimize their processes, reduce production costs, enhance overall
+                            efficiency, and minimize their environmental impact.
+                        </p>
+                        <p class="text-600 mt-6" style="color: #515151;">To utilize additive manufacturing to produce
+                            locally made, high-quality, and cost-effective laboratory consumables and disposables,
+                            reducing Africa's dependency on imports. We strive to enhance healthcare and research
+                            capabilities across the continent while promoting sustainable practices.</p>
+
+                        <div class="mt-[18px]">
+                            <h3 class="font-bold text-lg">Where we stand</h3>
+                            <p class="text-600" style="color: #515151;">3D Plug stands at the intersection of innovation
+                                and accessibility. As both a manufacturer and supplier,
+                                we enable institutions to access world-class laboratory solutions that are affordable,
+                                adaptable, and
+                                locally sourced. We are committed to reshaping Africa’s manufacturing potential, one
+                                product at a time.</p>
+                        </div>
+
+                        <!-- <div class="mt-4 border-t pt-4">
+                            <h3 class="font-bold text-lg">Our focus</h3>
+                            <p class="text-gray-600" style="color: #515151;">Our team of passionate experts, combined
+                                with advanced technology, allows us to make 3D printing more accessible, efficient, and
+                                cost-effective than ever. Our solutions empower businesses by equipping them with the
+                                necessary tools and capabilities to improve production processes, lower costs, and
+                                encourage sustainable practices</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DRIVING IMPACT -->
+    <div class="bg-[#FFF] flex justify-center items-center min-h-screen !mt-[60px] md!mt-[160px]">
+        <div class="w-full max-w-7xl bg-[#FFF] p-6">
+            <div class="text-center mb-6">
+                <p class="text-[#131110] text-center text-[16px] font-medium leading-[23px] !mb-[12px]">
+                    What we Offer
+                </p>
+                <h2
+                    class="text-[#131110] text-center w-[90%] md:w-[40%] !text-[40px] font-medium leading-[42px] tracking-[-2px] !mb-[5px] mx-auto">
+                    Driving Impact across Industries
+                </h2>
+            </div>
+            <div class="mt-[20px] grid !gap-[37px]">
+                <div class="grid md:!grid-cols-[6fr_6fr] !grid-cols-[12fr] gap-[24px]">
+
+                    <div
+                        class="rounded-[20px] !bg-[#d20f4b1a] !border border-solid !border-[#d20f4b1a] grid gap-[8px] !p-[30px] flex flex-col">
+                        <div class="p-[12px] bg-[#131110] rounded-[10px] w-[48px] h-[48px]">
+                            <img src="./3d-icons/manufacturing.svg" alt="manufacturing">
+                        </div>
+                        <h4 class="!text-[20px] font-bold text-[#101828] !mt-[13px]">On-Demand Manufacturing</h4>
+                        <p class="text-[#131110] !text-[18px] font-normal leading-[30.6px] tracking-[-0.4px]">Simplify
+                            your production process with our quick, hassle-free 3D printing services.</p>
+                        <div class="flex gap-[8px] items-center mt-[13px]">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Upload digital designs and receive ready-to-use products without
+                                owning a printer.</p>
+                        </div>
+                        <div class="flex gap-[8px] items-center">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Eliminate upfront costs and complex production management.</p>
+                        </div>
+                        <div class="flex gap-[8px] items-center">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Enjoy fast, on-demand delivery of customized objects.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="rounded-[20px] !bg-[#d20f4b1a] !border border-solid !border-[#d20f4b1a] grid gap-[8px] !p-[30px] flex flex-col">
+                        <div class="p-[12px] bg-[#131110] rounded-[10px] w-[48px] h-[48px]">
+                            <img src="./3d-icons/designn.svg" alt="design">
+                        </div>
+                        <h4 class="!text-[20px] font-bold text-[#101828] !mt-[13px]">Design & Prototype</h4>
+                        <p class="text-[#131110] !text-[18px] font-normal leading-[30.6px] tracking-[-0.4px]">Turn
+                            complex concepts into reality with our advanced design and prototyping solutions.</p>
+                        <div class="flex gap-[8px] items-center mt-[13px]">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Transform intricate designs into physical models using 3D
+                                printing.</p>
+                        </div>
+                        <div class="flex gap-[8px] items-center">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Work with diverse materials, from polymers to metals.</p>
+                        </div>
+                        <div class="flex gap-[8px] items-center">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Push innovation boundaries in product development.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="rounded-[20px] !bg-[#d20f4b1a] !border border-solid !border-[#d20f4b1a] grid gap-[8px] !p-[30px] flex flex-col">
+                        <div class="p-[12px] bg-[#131110] rounded-[10px] w-[48px] h-[48px]">
+                            <img src="./3d-icons/low-manufacture.svg" alt="low-manufacture">
+                        </div>
+                        <h4 class="!text-[20px] font-bold text-[#101828] !mt-[13px]">Low-Volume Manufacturing</h4>
+                        <p class="text-[#131110] !text-[18px] font-normal leading-[30.6px] tracking-[-0.4px]">Create
+                            personalized and locally manufactured consumables and disposables.
+                        </p>
+                        <div class="flex gap-[8px] items-center mt-[13px]">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Tailor products to customer preferences and specifications.</p>
+                        </div>
+                        <div class="flex gap-[8px] items-center">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Leverage 3D printing for flexible, scalable production.</p>
+                        </div>
+                        <div class="flex gap-[8px] items-center">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Offer unique, high-quality items at competitive costs.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="rounded-[20px] !bg-[#d20f4b1a] !border border-solid !border-[#d20f4b1a] grid gap-[8px] !p-[30px] flex flex-col">
+                        <div class="p-[12px] bg-[#131110] rounded-[10px] w-[48px] h-[48px]">
+                            <img src="./3d-icons/processing.svg" alt="processing">
+                        </div>
+                        <h4 class="!text-[20px] font-bold text-[#101828] !mt-[13px]">General Laboratory Equipment Supply</h4>
+                        <p class="text-[#131110] !text-[18px] font-normal leading-[30.6px] tracking-[-0.4px]">Sourcing and delivering a wide range of laboratory instruments and tools to hospitals, research facilities, and educational institutions. </p>
+                        <div class="flex gap-[8px] items-center mt-[13px]">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Wide selection of reliable laboratory equipment and instruments</p>
+                        </div>
+                        <div class="flex gap-[8px] items-center">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Trusted supply to hospitals, laboratories, and universities.</p>
+                        </div>
+                        <div class="flex gap-[8px] items-center">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Commitment to quality, efficiency, and dependable service.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="rounded-[20px] !bg-[#d20f4b1a] !border border-solid !border-[#d20f4b1a] grid gap-[8px] !p-[30px] flex flex-col">
+                        <div class="p-[12px] bg-[#131110] rounded-[10px] w-[48px] h-[48px]">
+                            <img src="./3d-icons/lab.svg" alt="laboratory" width="150%">
+                        </div>
+                        <h4 class="!text-[20px] font-bold text-[#101828] !mt-[13px]">Injection Moulded Lab Products</h4>
+                        <p class="text-[#131110] !text-[18px] font-normal leading-[30.6px] tracking-[-0.4px]">Supplying high-quality laboratory consumables, including slides trays, petri dishes, pipette tips, test tubes, specimen cups, and more.</p>
+                        <div class="flex gap-[8px] items-center mt-[13px]">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Durable local consumables for reliable laboratory use.</p>
+                        </div>
+                        <div class="flex gap-[8px] items-center">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Wide product range to support diverse testing and research needs.</p>
+                        </div>
+                        <div class="flex gap-[8px] items-center">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Consistent quality standards for efficiency in every lab.</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="rounded-[20px] !bg-[#d20f4b1a] !border border-solid !border-[#d20f4b1a] grid gap-[8px] !p-[30px] flex flex-col">
+                        <div class="p-[12px] bg-[#131110] rounded-[10px] w-[48px] h-[48px]">
+                            <img src="./3d-icons/tool.svg" alt="tools" width="100%">
+                        </div>
+                        <h4 class="!text-[20px] font-bold text-[#101828] !mt-[13px]">Custom Tooling and Mould Design</h4>
+                        <p class="text-[#131110] !text-[18px] font-normal leading-[30.6px] tracking-[-0.4px]">Designing and developing efficient mould solutions that enable scalable, high-quality production.</p>
+                        <div class="flex gap-[8px] items-center mt-[13px]">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Tailored tooling and mould designs to meet specific production needs.</p>
+                        </div>
+                        <div class="flex gap-[8px] items-center">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Scalable solutions that support both prototypes and large-volume manufacturing.</p>
+                        </div>
+                        <div class="flex gap-[8px] items-center">
+                            <img src="./3d-icons/check.svg" alt="check">
+                            <p class="text-[#475467]">Precision engineering to ensure consistency, efficiency, and cost-effectiveness.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TRUSTED BY PARTNERS -->
+    <section class="max-w-8xl mx-auto !pt-[45px] md:!pt-[96px] px-6 text-center">
+        <h2 class="text-black text-center text-[11.625px] font-medium tracking-[0.72px] uppercase mb-10 md:mb-[30px]">
+            Trusted by world-leading businesses
+        </h2>
+        <div class="slideshow-container">
+            <div class="flex flex-wrap gap-[100px] md:gap-[40px] mb-[30px] md:mb-[110px] slideshow">
+                
+                <img src="./3d-icons/partner/ampath-logo.svg" alt="brand-logo">
+                <img src="./3d-icons/partner/capitec-logo.svg" alt="brand-logo">
+                <img src="./3d-icons/partner/FNB-logo.png" alt="brand-logo">
+                <img src="./3d-icons/partner/samrc-logo.png" alt="brand-logo">
+                <img src="./3d-icons/partner/UJ-logo.jpg" alt="brand-logo">
+                <img src="./3d-icons/partner/thriftline-logo.png" alt="brand-logo">
+                <img src="./3d-icons/partner/vox.png" alt="brand-logo">
+
+
+                <!-- Duplicate images for seamless looping -->
+                <img src="./3d-icons/partner/ampath-logo.svg" alt="brand-logo">
+                <img src="./3d-icons/partner/capitec-logo.svg" alt="brand-logo">
+                <img src="./3d-icons/partner/FNB-logo.png" alt="brand-logo">
+                <img src="./3d-icons/partner/samrc-logo.png" alt="brand-logo">
+                <img src="./3d-icons/partner/UJ-logo.jpg" alt="brand-logo">
+                <img src="./3d-icons/partner/thriftline-logo.png" alt="brand-logo">
+                <img src="./3d-icons/partner/vox.png" alt="brand-logo">
+
+                <!-- Duplicate images for seamless looping -->
+                <img src="./3d-icons/partner/ampath-logo.svg" alt="brand-logo">
+                <img src="./3d-icons/partner/capitec-logo.svg" alt="brand-logo">
+                <img src="./3d-icons/partner/FNB-logo.png" alt="brand-logo">
+                <img src="./3d-icons/partner/samrc-logo.png" alt="brand-logo">
+                <img src="./3d-icons/partner/UJ-logo.jpg" alt="brand-logo">
+                <img src="./3d-icons/partner/thriftline-logo.png" alt="brand-logo">
+                <img src="./3d-icons/partner/vox.png" alt="brand-logo">
+
+                <!-- Duplicate images for seamless looping -->
+                <img src="./3d-icons/partner/ampath-logo.svg" alt="brand-logo">
+                <img src="./3d-icons/partner/capitec-logo.svg" alt="brand-logo">
+                <img src="./3d-icons/partner/FNB-logo.png" alt="brand-logo">
+                <img src="./3d-icons/partner/samrc-logo.png" alt="brand-logo">
+                <img src="./3d-icons/partner/UJ-logo.jpg" alt="brand-logo">
+                <img src="./3d-icons/partner/thriftline-logo.png" alt="brand-logo">
+                <img src="./3d-icons/partner/vox.png" alt="brand-logo">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <div class="!bg-[#FAE7ED] flex items-center justify-center min-h-screen">
+        <div
+            class="p-8 max-w-7xl w-full gap-[30px] md:gap-[68px] grid grid-cols-1 lg:grid-cols-2 max-w-6xl mx-auto my-[40px] pt-[32px] pb-[100px]">
+
+            <div class="flex flex-col justify-center">
+                <p class="!text-[14px] font-semibold tracking-widest text-black mb-3">CONTACT US</p>
+                <h2 class="!text-[32px] font-bold leading-7 mb-8 w-[80%]">
+                    Let us help you bring your  ideas to life with advanced 3D solutions.
+                </h2>
+
+                <!-- Call Us -->
+                <div class="flex items-center mb-6">
+                    <div class="bg-[#D20F4B] p-7 !rounded-[20%]">
+                        <img src="./3d-icons/phone.svg" alt="phone" width="100%">
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm">Call Us</p>
+                        <p class="font-bold">+27 87 148 7744</p>
+                    </div>
+                </div>
+
+                <hr class="border-gray-700 mb-6">
+
+                <!-- Email -->
+                <div class="flex items-center mb-6">
+                    <div class="bg-[#D20F4B] p-7 !rounded-[20%]">
+                        <img src="./3d-icons/email.svg" alt="email" width="100%">
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm">Email</p>
+                        <p class="font-bold">sales@3dplug.com</p>
+                    </div>
+                </div>
+                <hr class="border-gray-700 mb-6">
+
+                <!-- Address -->
+
+                <div class="flex items-center mb-6">
+                    <div class="bg-[#D20F4B] p-7 !rounded-[20%]">
+                        <img src="./3d-icons/location.svg" alt="location" width="130%">
+                    </div>
+                    <div class="ml-4">
+                        <p class="text-sm">Address</p>
+                        <p class="font-bold">39 Rivonia Road, <br />
+                            Commerce Square, B3 FL3 <br />
+                            Sandhurst, Johannesburg 2091</p>
+                    </div>
+                </div>
+                <!-- <hr class="border-gray-700 mb-6"> -->
+            </div>
+
+            <div class="w-full">
+                <form>
+                    <div class="mb-[24px]">
+                        <label class="block text-[#344054] mb-[6px]">Name</label>
+                        <input type="text" placeholder="Name"
+                            class="w-full !py-[10px] !px-[14px] border-2 border-[10px] border-solid rounded-lg !border-[#fff] bg-white">
+                    </div>
+                    <div class="mb-[24px]">
+                        <label class="block text-[#344054] mb-[6px]">Email Address</label>
+                        <input type="email" placeholder="Email address"
+                            class="w-full !py-[10px] !px-[14px] border-2 rounded-lg !border-[#fff] bg-white">
+                    </div>
+
+                    <div class="mb-[24px]">
+                        <label class="block text-[#344054] mb-[6px]">Phone Number</label>
+                        <input type="tel" placeholder="Phone number"
+                            class="w-full !py-[10px] !px-[14px] border-2 rounded-lg !border-[#fff] bg-white">
+                    </div>
+
+                    <div class="mb-[24px]">
+                        <label class="block text-[#344054] mb-[6px]">Service</label>
+                        <select class="w-full !py-[10px] !px-[14px] border-2 rounded-lg bg-white !border-[#fff]">
+                            <option class="text-[#344054] w-[50%]"></option>
+                            <option class="text-[#344054] w-[50%]">Product Design</option>
+                            <option class="text-[#344054]">Consultation Services</option>
+                        </select>
+                    </div>
+                    <div class="mb-[24px]">
+                        <label class="block text-[#344054] mb-[6px]">Message</label>
+                        <textarea placeholder="Leave us a message..."
+                            class="w-full !py-[10px] !px-[14px] border-2 rounded-lg bg-white !border-[#fff] h-[70px]"></textarea>
+                    </div>
+                    <button class="w-full !bg-[#D20F4B] text-white font-semibold py-2 rounded">SEND MESSAGE</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- FOOTER -->
+    <div class="!bg-[#FFF] p-4">
+        <div class="max-w-7xl mx-auto ">
+            <div class="flex justify-left lg:justify-center items-center mb-[39px] mt-10">
+                <img src="./3d-icons/3DPlug-logo.png" alt="3D-Plug" class="h-14 mr-2">
+            </div>
+            <div
+                class="flex flex-col lg:flex-row justify-center gap-4 lg:gap-8 mb-4 text-[#475467] text-[20px] font-semibold leading-6">
+                <a href="about.html">About Us</a>
+                <a href="services.html">Our Services</a>
+                <a href="contact.html">Contact Us</a>
+                <!-- <a href="#">Terms and Conditions</a>
+                <a href="#">Privacy Policy</a> -->
+            </div>
+
+            <div class="grid gap-4 md:flex justify-between items-center mt-[76px] mb-[48px]">
+                <div class="grid gap-2 md:flex">
+                    <p class="text-[#475467] font-normal !text-[14px] leading-[24px]">&copy; 2025 3D-Plug,</p>
+                    <p class="text-[#475467] font-normal !text-[14px] leading-[24px]">All rights reserved.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Wiggle the button every 2 seconds
+        document.addEventListener("DOMContentLoaded", function () {
+            const btn = document.querySelector('.wiggle-btn');
+            setInterval(() => {
+                btn.classList.remove('wiggle-btn');
+                void btn.offsetWidth; // trigger reflow
+                btn.classList.add('wiggle-btn');
+            }, 2000);
+        });
+        const hamburger = document.getElementById('hamburger');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        hamburger.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('active');
+            hamburgerIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+    </script>
+
+
+    <script>
+        document.querySelectorAll('details').forEach((detail) => {
+            detail.addEventListener('toggle', () => {
+                // Close other dropdowns if this one is opened
+                if (detail.open) {
+                    document.querySelectorAll('details').forEach((otherDetail) => {
+                        if (otherDetail !== detail && otherDetail.open) {
+                            otherDetail.open = false; // Close the other dropdown
+                        }
+                    });
+                }
+
+                // Update the icon based on the open state
+                const icon = detail.querySelector('.toggle-sign') || detail.querySelector('.faq-toggle-sign');
+                if (detail.open) {
+                    if (icon.classList.contains('toggle-sign')) {
+                        icon.src = './3d-icons/arrow-down.svg';
+                    } else if (icon.classList.contains('faq-toggle-sign')) {
+                        icon.src = './3d-icons/minus.svg';
+                    }
+                } else {
+                    if (icon.classList.contains('toggle-sign')) {
+                        icon.src = './3d-icons/arrow-up.svg';
+                    } else if (icon.classList.contains('faq-toggle-sign')) {
+                        icon.src = './3d-icons/plus.svg';
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- REGISTER LINK -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const newLink = "https://cdp-frontend-staging-749119130796.europe-west1.run.app/register"; // New URL
+            document.querySelectorAll("a.register-link").forEach(link => {
+                link.href = newLink;
+            });
+        });
+    </script>
+
+    <!-- LOGIN LINK -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const newLink = "https://cdp-frontend-staging-749119130796.europe-west1.run.app/login"; // New URL
+            document.querySelectorAll("a.login-link").forEach(link => {
+                link.href = newLink;
+            });
+        });
+    </script>
+
+    <!-- Simple Image Slider -->
+    <script>
+        const sliderImages = [
+            './3d-images/leg-2.png',
+            './3d-images/box.png',
+            './3d-images/leg-2.png'
+        ];
+        let currentSlide = 0;
+        const slideImg = document.getElementById('slide-img');
+        function showNextSlide() {
+            // Fade out
+            slideImg.style.opacity = 0;
+            setTimeout(() => {
+                currentSlide = (currentSlide + 1) % sliderImages.length;
+                slideImg.src = sliderImages[currentSlide];
+                // Fade in
+                slideImg.style.opacity = 1;
+            }, 700); // match duration-700
+        }
+        setInterval(showNextSlide, 2000);
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdown = document.getElementById('choose-us-dropdown');
+            if (!dropdown) return;
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            dropdown.classList.remove('opacity-0', 'translate-y-10');
+                            dropdown.classList.add('opacity-100', 'translate-y-0');
+                            observer.unobserve(dropdown);
+                        }
+                    });
+                },
+                { threshold: 0.2 }
+            );
+            observer.observe(dropdown);
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdown = document.getElementById('industry-dropdown');
+            if (!dropdown) return;
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            dropdown.classList.remove('opacity-0', 'translate-y-10');
+                            dropdown.classList.add('opacity-100', 'translate-y-0');
+                            observer.unobserve(dropdown);
+                        }
+                    });
+                },
+                { threshold: 0.2 }
+            );
+            observer.observe(dropdown);
+        });
+    </script>
+
+</body>
+
+</html>

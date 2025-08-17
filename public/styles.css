@@ -37,13 +37,13 @@
         flex-wrap: nowrap; /* Prevents images from wrapping */
         align-items: center;
         width: max-content; /* Ensures the container is wide enough */
-        animation: slide 10s linear infinite;
+        animation: slide 100s linear infinite;
     }
     
     .slideshow img {
         width: 180px; /* Adjust width */
         max-width: 20vw; /* Ensures responsiveness */
-        margin: 0 10px; /* Adjust spacing */
+        margin: 0 40px; /* Adjust spacing */
     }
     
     /* Keyframes for infinite sliding effect */
