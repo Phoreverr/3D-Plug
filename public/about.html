@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="hidden lg:flex gap-[10px]">
-                    <a href="#" class="register-link" target="_blank">
+                    <a href="contact.html" target="_blank">
                         <button
                             class="hidden lg:flex !bg-[#D20F4B] !border-[#D20F4B] border-2 font-bold !text-[#fff] !px-[28px] !py-[12px] rounded-md wiggle-btn">Get
                             Started</button>
@@ -100,7 +100,7 @@
                     <a href="contact.html" class="px-4 py-2 hover:bg-gray-200">Contact</a>
 
                     <div class="flex font-medium p-3 flex-row gap-1 items-center">
-                        <a href="#" class="register-link" target="_blank">
+                        <a href="contact.html" target="_blank">
                             <button
                                 class=" !bg-[#D20F4B] !border-[#D20F4B] border-2 font-bold !text-[#fff] !px-[28px] !py-[15px] rounded-md">Get
                                 Started</button>
@@ -128,7 +128,7 @@
         </div>
     </div>
 
-<!-- WHO WE ARE -->
+    <!-- WHO WE ARE -->
     <div class="bg-white" id="features">
         <!-- WHO WE ARE -->
         <div class="bg-white-100">
@@ -180,13 +180,8 @@
        
         <div class="bg-white-100">
             <div class="max-w-7xl mx-auto px-9 pt-[50px] !pb-[30px] md:py-[148px]">
-                <div class="flex flex-col lg:flex-row items-center lg:items-start gap-[100px]">
-
-
-
-                    <div class="w-full lg:w-1/2 flex justify-center items-center h-full my-auto">
-                        <img src="./3d-images/mission.jpg" alt="mission" class="w-full lg:w-auto rounded-lg shadow-lg">
-                    </div>
+                <div class="flex flex-col lg:flex-row-reverse items-center lg:items-start gap-[100px]">
+                    
 
                     <!-- Content Section -->
                     <div class="w-full lg:w-1/2">
@@ -221,6 +216,10 @@
                                 necessary tools and capabilities to improve production processes, lower costs, and
                                 encourage sustainable practices</p>
                         </div> -->
+                    </div>
+
+                    <div class="w-full lg:w-1/2 flex justify-center items-center h-full my-auto">
+                        <img src="./3d-images/mission.jpg" alt="mission" class="w-full lg:w-auto rounded-lg shadow-lg">
                     </div>
                 </div>
             </div>
@@ -564,47 +563,6 @@
         });
     </script>
 
-    <!-- REGISTER LINK -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const newLink = "https://cdp-frontend-staging-749119130796.europe-west1.run.app/register"; // New URL
-            document.querySelectorAll("a.register-link").forEach(link => {
-                link.href = newLink;
-            });
-        });
-    </script>
-
-    <!-- LOGIN LINK -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const newLink = "https://cdp-frontend-staging-749119130796.europe-west1.run.app/login"; // New URL
-            document.querySelectorAll("a.login-link").forEach(link => {
-                link.href = newLink;
-            });
-        });
-    </script>
-
-    <!-- Simple Image Slider -->
-    <script>
-        const sliderImages = [
-            './3d-images/leg-2.png',
-            './3d-images/box.png',
-            './3d-images/leg-2.png'
-        ];
-        let currentSlide = 0;
-        const slideImg = document.getElementById('slide-img');
-        function showNextSlide() {
-            // Fade out
-            slideImg.style.opacity = 0;
-            setTimeout(() => {
-                currentSlide = (currentSlide + 1) % sliderImages.length;
-                slideImg.src = sliderImages[currentSlide];
-                // Fade in
-                slideImg.style.opacity = 1;
-            }, 700); // match duration-700
-        }
-        setInterval(showNextSlide, 2000);
-    </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {

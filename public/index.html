@@ -53,7 +53,7 @@
                 </div>
 
                 <div class="hidden lg:flex gap-[10px]">
-                    <a href="#" class="register-link" target="_blank">
+                    <a href="contact.html" target="_blank">
                         <button
                             class="hidden lg:flex !bg-[#D20F4B] !border-[#D20F4B] border-2 font-bold !text-[#fff] !px-[28px] !py-[12px] rounded-md wiggle-btn">Get
                             Started</button>
@@ -103,7 +103,7 @@
                     <a href="contact.html" class="px-4 py-2 hover:bg-gray-200">Contact</a>
 
                     <div class="flex font-medium p-3 flex-row gap-1 items-center">
-                        <a href="#" class="register-link" target="_blank">
+                        <a href="contact.html" target="_blank">
                             <button
                                 class=" !bg-[#D20F4B] !border-[#D20F4B] border-2 font-bold !text-[#fff] !px-[28px] !py-[15px] rounded-md">Get
                                 Started</button>
@@ -357,24 +357,6 @@
         </div>
     </div>
 
-    <div  class="w-full max-w-7xl mx-auto bg-[#FFF] p-6">
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide 4</div>
-                <div class="swiper-slide">Slide 5</div>
-                <div class="swiper-slide">Slide 6</div>
-                <div class="swiper-slide">Slide 7</div>
-                <div class="swiper-slide">Slide 8</div>
-                <div class="swiper-slide">Slide 9</div>
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-    </div>
-
     <!-- Trusted by partners -->
     <section class="max-w-8xl mx-auto !pt-[45px] md:!pt-[96px] px-6 text-center">
         <h2 class="text-black text-center text-[11.625px] font-medium tracking-[0.72px] uppercase mb-10 md:mb-[30px]">
@@ -577,7 +559,7 @@
                                     on-site production of spare parts and customized components. By streamlining
                                     processes, we help companies significantly reduce production costs. Partner with us
                                     to drive innovation while cutting expenses and maximizing productivity in your
-                                    mining operations.</p>
+                                    aerospace operations.</p>
                             </details>
                         </div>
 
@@ -688,8 +670,8 @@
                     </p>
                 </div>
                 <div class="mt-6">
-                    <a href="#"
-                        class="bg-[#D20F4B] text-white font-medium py-2 px-6 rounded-full shadow hover:bg-yellow-500 transition">
+                    <a href="contact.html"
+                        class="bg-[#D20F4B] text-white font-medium py-2 px-6 rounded-full shadow transition">
                         Contact Us
                     </a>
                 </div>
@@ -736,7 +718,7 @@
             </p>
 
             <div class="flex justify-center gap-3 pb-[53px] font-bold">
-                <a href="#">
+                <a href="contact.html">
                     <button
                         class="flex !bg-[#D20F4B] !text-[#fff] !px-[20px] !py-[10px] rounded-md border-2 !border-[#D20F4B] border-solid">
                         Get an instant quote</button>
@@ -840,7 +822,6 @@
     <br>
     <br>
 
-
     <!-- FOOTER -->
     <div class="!bg-[#FFF] p-4">
         <div class="max-w-7xl mx-auto ">
@@ -921,26 +902,6 @@
         });
     </script>
 
-    <!-- REGISTER LINK -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const newLink = "https://cdp-frontend-staging-749119130796.europe-west1.run.app/register"; // New URL
-            document.querySelectorAll("a.register-link").forEach(link => {
-                link.href = newLink;
-            });
-        });
-    </script>
-
-    <!-- LOGIN LINK -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const newLink = "https://cdp-frontend-staging-749119130796.europe-west1.run.app/login"; // New URL
-            document.querySelectorAll("a.login-link").forEach(link => {
-                link.href = newLink;
-            });
-        });
-    </script>
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const dropdown = document.getElementById('choose-us-dropdown');
@@ -983,21 +944,21 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-    });
-  </script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+        });
+    </script>
 
 </body>
 
