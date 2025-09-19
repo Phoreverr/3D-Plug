@@ -1,11 +1,108 @@
-.hamburger {
+    .hamburger {
     position: relative;
-    z-index: 20; /* Ensure it is above other elements */
+    z-index: 20;
     }
+
+    /* Fullscreen loader */
+    #loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    }
+
+    /* Bouncing box */
+    .bounce {
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    animation: bounce 2.5s ease-in-out 1;
+    }
+
+/* Bounce animation (3 up-down cycles in 2.5s) */
+    @keyframes bounce {
+    0%, 100%   { transform: translateY(0); }
+    16%, 50%, 83% { transform: translateY(-50px); } /* go up */
+    33%, 66%   { transform: translateY(0); } /* back down */
+    }
+
+    .active {
+    border-bottom: 2px solid #d20f4b;
+    }
+
+    .active-hover:hover {
+    border-bottom: 2px solid #d20f4b;
+    }
+
+    .animate-in {
+      animation: slideInLeft 0.8s ease-out forwards;
+    }
+
+  .animate-delay {
+    animation-delay: 0.3s;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .link-btn {
+      font-size: 16px;
+      font-weight: 500;
+      font-family: var(--title-font);
+      display: inline-block;
+      line-height: 0.8;
+      position: relative;
+      padding-bottom: 6px;
+      margin-bottom: 0px;
+      text-transform: uppercase;
+      color: white;
+      display: inline-flex;
+      gap: 10px;
+      padding: 20px;
+      background-color: #d20f4b;
+      border-radius: 100px;
+      text-decoration: none;
+  }
+
+  .link-effect {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    height: 17px;
+    line-height: normal;
+    width: fit-content;
+  }
+
+  .link-effect .effect-1 {
+    display: block;
+    height: 100%;
+    position: relative;
+    top: 0%;
+    transition: 0.3s;
+  }
+  .link-effect:hover .effect-1 {
+    top: -100%;
+  }
+
 
     .dropdown-menu {
         display: none;
         transition: max-height 0.3s ease-in-out;
+        background-color: black;
     }
 
     .dropdown-menu.active {
@@ -21,7 +118,6 @@
     }
 
     summary::-webkit-details-marker { display: none }
-
 
     .swiper {
       width: 100%;
@@ -112,4 +208,60 @@
         height: 50px;
     }
 }
-       
+   
+
+/* Bounce animation for IMPACT */
+
+@keyframes svg-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* On hover, animate the svg continuously */
+
+.impact-box:hover img.svg-bounce {
+  animation: svg-bounce 0.6s infinite;
+}
+
+.show-primary {
+    font-size: 16px;
+    font-weight: 700;
+    font-family: var(--title-font);
+    display: inline-block;
+    line-height: 0.8;
+    position: relative;
+    padding-bottom: 6px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    color: black;
+    display: inline-flex;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.primary-effect {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  height: 53px;
+  line-height: normal;
+  width: fit-content;
+}
+
+
+.primary-effect .effect-1 {
+  display: block;
+  height: 100%;
+  position: relative;
+  top: 0%;
+  transition: 0.3s;
+}
+
+.impact-box:hover .primary-effect .effect-1 {
+  top: -100%;
+  color: #d20f4b;
+}

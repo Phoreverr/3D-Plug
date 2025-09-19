@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="index.js"></script>
     <link rel="stylesheet" href="./styles.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
@@ -24,117 +25,74 @@
 
 <body style="font-family: 'Inter', sans-serif;" class="text-black">
 
-    <!-- NAVBAR -->
-    <nav class="!bg-[#fff] fixed top-0 w-full z-50">
-        <div class="max-w-[1250px] mx-auto">
-            <div class="flex justify-between items-center !px-[20px] !py-[20px]">
-                <div class="flex text-[15.75px] font-extrabold leading-[17.6px]">
-
-                    <a href="#" class="flex gap-0 items-center">
-                        <img src="./3d-icons/3DPlug-logo.png" alt="GCS Logo" class="!h-[70px]">
-                    </a>
-                </div>
-
-                <div class="hamburger cursor-pointer lg:hidden" id="hamburger">
-                    <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none"
-                        viewBox="0 0 24 24" stroke="black">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
-                    <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 hidden" fill="none"
-                        viewBox="0 0 24 24" stroke="black">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </div>
-
-                <div class="menu hidden lg:flex gap-[59px] font-medium text-black ml-30">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About Us</a>
-                    <a href="services.html">Product & Services</a>
-                    <a href="contact.html">Contact Us</a>
-                </div>
-
-                <div class="hidden lg:flex gap-[10px]">
-                    <a href="contact.html" target="_blank">
-                        <button
-                            class="hidden lg:flex !bg-[#D20F4B] !border-[#D20F4B] border-2 font-bold !text-[#fff] !px-[28px] !py-[12px] rounded-md wiggle-btn">Get
-                            Started</button>
-                        <style>
-                            @keyframes wiggle {
-
-                                0%,
-                                100% {
-                                    transform: rotate(0deg);
-                                }
-
-                                10% {
-                                    transform: rotate(-7deg);
-                                }
-
-                                20% {
-                                    transform: rotate(7deg);
-                                }
-
-                                30% {
-                                    transform: rotate(-7deg);
-                                }
-
-                                40% {
-                                    transform: rotate(7deg);
-                                }
-
-                                50% {
-                                    transform: rotate(0deg);
-                                }
-                            }
-
-                            .wiggle-btn {
-                                display: inline-flex;
-                                animation: wiggle 0.5s ease-in-out;
-                                animation-iteration-count: 1;
-                            }
-                        </style>
-                    </a>
-                </div>
-
-                <div
-                    class="dropdown-menu hidden flex-col absolute top-[100px] pl-[20px] left-0 bg-white shadow-lg w-full z-10 !bg-[#fff] text-black">
-                    <a href="index.html" class="px-4 py-2 hover:bg-gray-200">Home</a>
-                    <a href="about.html" class="px-4 py-2 hover:bg-gray-200">About Us</a>
-                    <a href="services.html" class="px-4 py-2 hover:bg-gray-200">Product & Services</a>
-                    <a href="contact.html" class="px-4 py-2 hover:bg-gray-200">Contact Us</a>
-
-                    <div class="flex font-medium p-3 flex-row gap-1 items-center">
-                        <a href="contact.html" target="_blank">
-                            <button
-                                class=" !bg-[#D20F4B] !border-[#D20F4B] border-2 font-bold !text-[#fff] !px-[28px] !py-[15px] rounded-md">Get
-                                Started</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- HEADER -->
-    <div class="text-center h-[550px] flex items-center ml-0 bg-cover bg-center bg-no-repeat 
-            bg-[linear-gradient(to_right,rgba(0,0,0,0.9),rgba(0,0,0,0)),url('./3d-images/contact.jpg')]">
-        <div class="max-w-7xl mx-auto text-white text-left w-full p-[20px] relative">
-            <div
-                class="flex items-center space-x-5 text-left !text-[16px] font-medium leading-[12px] tracking-[1px] uppercase">
-                <a href="index.html">HOME</a>
-                <img src="./3d-icons/arrow-right.svg" alt="arrow-right">
-                <p>CONTACT US</p>
-            </div>
-            <h1
-                class="text-left font-archivo !text-[56px] !mt-[14px] font-bold leading-[53.9px] tracking-[-1.5px] capitalize">
-                Contact Us
-            </h1>
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="bounce">
+            <img src="./3d-images/3d-black.png" alt="">
         </div>
     </div>
 
+    <!-- HEADER -->
+    <div class="text-center h-[500px] flex ml-0 bg-cover bg-center bg-no-repeat 
+            bg-[linear-gradient(to_right,rgba(0,0,0,0.9),rgba(0,0,0,0)),url('./3d-images/contact.jpg')]">
+        <div class="max-w-8xl mx-auto text-white text-left w-full relative">
 
+            <div class="mx-auto">
+                <div class="flex justify-between items-center !px-[20px] !pt-[20px]">
+
+                    <div class="flex text-[15.75px] font-extrabold leading-[17.6px]">
+                        <a href="#" class="flex gap-0 items-center">
+                            <img src="./3d-icons/3d-black-2.png" alt="GCS Logo" class="!h-[65px] md:!h-[90px]">
+                        </a>
+                    </div>
+
+                    <div class="hamburger cursor-pointer lg:hidden" id="hamburger">
+                        <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none"
+                            viewBox="0 0 24 24" stroke="white">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                        <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 hidden" fill="none"
+                            viewBox="0 0 24 24" stroke="white">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </div>
+
+                    <div class="menu hidden lg:flex gap-[59px] font-medium text-white ml-30">
+                        <a href="index.html" class="active-hover">Home</a>
+                        <a href="about.html " class="active-hover">About Us</a>
+                        <a href="services.html" class="active-hover">Product & Services</a>
+                        <a href="contact.html" class="active">Contact Us</a>
+                    </div>
+
+                    <div
+                        class="dropdown-menu hidden flex-col absolute top-[80px] pl-[20px] left-0 bg-white shadow-lg w-full z-10 !bg-[#000] text-black">
+                        <a href="index.html" class="px-4 text-white py-2 hover:bg-gray-200">Home</a>
+                        <a href="about.html" class="px-4 text-white py-2 hover:bg-gray-200">About Us</a>
+                        <a href="services.html" class="px-4 text-white py-2 hover:bg-gray-200">Product & Services</a>
+                        <a href="contact.html" class="px-4 text-white py-2 hover:bg-gray-200">Contact</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-center max-w-7xl mx-auto text-white text-left w-full p-[50px] mt-[100px]">
+                <div
+                    class="flex items-center space-x-5 text-left !text-[16px] font-medium leading-[12px] tracking-[1px] uppercase">
+                    <a href="index.html">HOME</a>
+                    <img src="./3d-icons/arrow-right.svg" alt="arrow-right">
+                    <p>CONTACT US</p>
+                </div>
+
+                <h1
+                    class="text-left font-archivo !text-[56px] !mt-[14px] font-bold leading-[53.9px] tracking-[-1.5px] capitalize">
+                    Contact Us
+                </h1>
+            </div>
+
+        </div>
+    </div>
 
     <!-- TRUSTED BY PARTNERS -->
     <section class="max-w-8xl mx-auto !pt-[45px] md:!pt-[96px] px-6 text-center">
@@ -282,32 +240,6 @@
         </div>
     </div>
 
-    <!-- Manufacture and Distribution -->
-    <!-- <div class=" py-10 md:px-6 px-4 bg-black mt-0">
-        <div class="bg-black text-white rounded-xl overflow-hidden flex flex-col md:flex-row max-w-7xl w-full mx-auto">
-
-            <div class="md:p-8 p-6 flex-1">
-                <h2 class=" text-white !text-[38px] font-medium leading-[42px] tracking-[-2px] w-[100%] md:w-[70%]">
-                    Manufacture and Distribution of Laboratory Consumables and Disposables</h2>
-                <p class="text-white !text-[18px] font-normal leading-[27px] tracking-[-1px] !mt-[30px] w-[90%]">We
-                    supply laboratories with high-quality consumables and disposables such as slide trays, petri dishes,
-                    pipette tips, test tubes, specimen cups, and more, ensuring precision, reliability, and consistency
-                    to support research, diagnostics, and clinical excellence.</p>
-            </div>
-
-            <div class=" flex md:grid md:grid-rows-[3fr_9fr] bg-black ">
-                <div class="hidden md:inline-block">
-
-                </div>
-                <div class="relative w-full">
-                    <img src="./3d-images/how-it-works2.jpg" alt="Customer engagement"
-                        class="h-full w-full object-cover rounded-tl-[250px]" />
-                </div>
-            </div>
-
-        </div>
-    </div> -->
-
     <br>
     <br>
     <br>
@@ -339,100 +271,6 @@
         </div>
     </div>
 
-    <script>
-        // Wiggle the button every 2 seconds
-        document.addEventListener("DOMContentLoaded", function () {
-            const btn = document.querySelector('.wiggle-btn');
-            setInterval(() => {
-                btn.classList.remove('wiggle-btn');
-                void btn.offsetWidth; // trigger reflow
-                btn.classList.add('wiggle-btn');
-            }, 2000);
-        });
-        const hamburger = document.getElementById('hamburger');
-        const dropdownMenu = document.querySelector('.dropdown-menu');
-        const hamburgerIcon = document.getElementById('hamburger-icon');
-        const closeIcon = document.getElementById('close-icon');
-
-        hamburger.addEventListener('click', () => {
-            dropdownMenu.classList.toggle('active');
-            hamburgerIcon.classList.toggle('hidden');
-            closeIcon.classList.toggle('hidden');
-        });
-    </script>
-
-
-    <script>
-        document.querySelectorAll('details').forEach((detail) => {
-            detail.addEventListener('toggle', () => {
-                // Close other dropdowns if this one is opened
-                if (detail.open) {
-                    document.querySelectorAll('details').forEach((otherDetail) => {
-                        if (otherDetail !== detail && otherDetail.open) {
-                            otherDetail.open = false; // Close the other dropdown
-                        }
-                    });
-                }
-
-                // Update the icon based on the open state
-                const icon = detail.querySelector('.toggle-sign') || detail.querySelector('.faq-toggle-sign');
-                if (detail.open) {
-                    if (icon.classList.contains('toggle-sign')) {
-                        icon.src = './3d-icons/arrow-down.svg';
-                    } else if (icon.classList.contains('faq-toggle-sign')) {
-                        icon.src = './3d-icons/minus.svg';
-                    }
-                } else {
-                    if (icon.classList.contains('toggle-sign')) {
-                        icon.src = './3d-icons/arrow-up.svg';
-                    } else if (icon.classList.contains('faq-toggle-sign')) {
-                        icon.src = './3d-icons/plus.svg';
-                    }
-                }
-            });
-        });
-    </script>
-
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const dropdown = document.getElementById('choose-us-dropdown');
-            if (!dropdown) return;
-            const observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            dropdown.classList.remove('opacity-0', 'translate-y-10');
-                            dropdown.classList.add('opacity-100', 'translate-y-0');
-                            observer.unobserve(dropdown);
-                        }
-                    });
-                },
-                { threshold: 0.2 }
-            );
-            observer.observe(dropdown);
-        });
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const dropdown = document.getElementById('industry-dropdown');
-            if (!dropdown) return;
-            const observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            dropdown.classList.remove('opacity-0', 'translate-y-10');
-                            dropdown.classList.add('opacity-100', 'translate-y-0');
-                            observer.unobserve(dropdown);
-                        }
-                    });
-                },
-                { threshold: 0.2 }
-            );
-            observer.observe(dropdown);
-        });
-    </script>
 
 </body>
 
