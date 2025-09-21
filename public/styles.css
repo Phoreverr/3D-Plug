@@ -107,6 +107,7 @@
 
     .dropdown-menu.active {
         display: flex;
+        border-bottom: none;
     }
 
     .hamburger.active + .dropdown-menu {

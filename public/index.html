@@ -24,7 +24,6 @@
     <meta property="og:image" content="https://d-plug.web.app/3d-icons/3DPlug-logo.png">
     <meta property="og:url" content="https://d-plug.web.app">
     <meta property="og:type" content="website">
-
 </head>
 
 <body style="font-family: 'Inter', sans-serif;" class="text-black">
@@ -35,13 +34,10 @@
         </div>
     </div>
 
-    <div class="relative w-full background" style="background: url('./3d-images/background-image.png');
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        background-repeat: no-repeat;">
 
-        <div class="max-w-8xl mx-auto">
+    <!-- HEADER -->
+    <div class="text-center bg-[url('./3d-images/home-5.png')] h-screen bg-cover bg-center bg-no-repeat ">
+        <div class="max-w-8xl mx-auto bg-[rgba(0,0,0,0.8)]">
             <div class="flex justify-between items-center !px-[20px] !pt-[20px]">
                 <div class="flex text-[15.75px] font-extrabold leading-[17.6px]">
                     <a href="#" class="flex gap-0 items-center">
@@ -62,7 +58,7 @@
                     </svg>
                 </div>
 
-                <div class="menu hidden lg:flex gap-[59px] font-medium text-white ml-30">
+                <div class="menu hidden lg:flex gap-[59px] font-medium text-white ml-30 mr-15">
                     <a href="index.html" class="active">Home</a>
                     <a href="about.html " class="active-hover">About Us</a>
                     <a href="services.html" class="active-hover">Product & Services</a>
@@ -70,27 +66,49 @@
                 </div>
 
                 <div
-                    class="dropdown-menu hidden flex-col absolute top-[80px] pl-[20px] left-0 bg-white shadow-lg w-full z-10 !bg-[#000] text-black">
-                    <a href="index.html" class="px-4 text-white py-2 hover:bg-gray-200">Home</a>
-                    <a href="about.html" class="px-4 text-white py-2 hover:bg-gray-200">About Us</a>
-                    <a href="services.html" class="px-4 text-white py-2 hover:bg-gray-200">Product & Services</a>
-                    <a href="contact.html" class="px-4 text-white py-2 hover:bg-gray-200">Contact</a>
+                    class="dropdown-menu hidden flex-col absolute top-[0px] left-0 bg-white shadow-lg w-full z-10 !bg-[#000001] text-black">
+
+                    <div class="flex justify-between items-center mt-6">
+                        <a href="#" class="flex gap-0 items-center">
+                            <img src="./3d-icons/3d-black-2.png" alt="GCS Logo" class="!h-[65px] md:!h-[90px]">
+                        </a>
+                    </div>
+
+                    <a href="index.html" class="py-4 px-[20px] text-white py-2 active-hover">Home</a>
+                    <a href="about.html" class="py-4 px-[20px] text-white py-2 active-hover">About Us</a>
+                    <a href="services.html" class="py-4 px-[20px] text-white py-2 active-hover">Product & Services</a>
+                    <a href="contact.html" class="py-4 px-[20px] text-white py-2 active-hover">Contact</a>
 
                 </div>
             </div>
         </div>
+        <div class="flex items-center justify-center mt-10">
+            <div class="pb-6 m-6 lg:m-0 w-[100%] md:w-[50%] bg-[rgba(0,0,0,0.5)]" style="color: white; border: 5px solid #FFFFFF33; border-radius: 5px;">
+                <p class="text-sm font-bold tracking-wide uppercase pt-10 pb-7 lg:pt- lg:pb-10">WELCOME TO 3D PLUG</p>
 
-        <div class="max-w-8xl mx-auto px-8 pb-10">
-            <h1
-                class="text-left leading-[45px] w-[90%] lg:w-[60%] leading-[40px] md:leading-[60px] !text-[40px] md:!text-[62px] font-bold tracking-[-2px] !mb-[20px] md:!mb-[40px] !mt-[20px] text-white slide-in">
-                At the Forefront of Locally Produced Laboratory Consumables and Disposables
-            </h1>
-            <p
-                class="!text-[20px] md:!text-[24px] !text-white !mb-[48px] w-[90%] md:w-[50%] text-left font-normal leading-[30px] md:leading-[30.6px] tracking-[-0.4px] slide-in delay">
-                We deliver precise 3D printing and scanning services that empower innovation across design,
-                engineering, manufacturing, healthcare and more.
-            </p>
+                <div>
+                    <h3 class="text-4xl lg:text-6xl font-bold tracking-[-1.5px] capitalize leading-[70px]">Transforming
+                        designs</h3>
+                    <h3 class="text-4xl lg:text-6xl font-bold tracking-[-1.5px] capitalize leading-[70px]">through local
+                    </h3>
+                    <h3 class="text-4xl lg:text-6xl font-bold tracking-[-1.5px] capitalize leading-[70px]">manufacturing
+                    </h3>
+                </div>
+
+                <p class="text-center text-base font-medium tracking-[1px] pt-4 pb-6 lg:pt-6 lg:pb-10 w-[89%] mx-auto">
+                    We are at the forefront of locally produced laboratory consumables and disposables</p>
+
+                <a href="services.html" class="link-btn mt-6">
+                    <span class="link-effect">
+                        <span class="effect-1">DISCOVER MORE</span>
+                        <span class="effect-1">DISCOVER MORE</span>
+                    </span>
+                    <!-- <img src="./3d-icons/arrow-left-top.svg" alt="icon"> -->
+                </a>
+            </div>
         </div>
+
+
     </div>
 
     <!-- WHO WE ARE -->
@@ -100,20 +118,17 @@
                 <div class="flex lg:flex-row items-center lg:items-start gap-[50px]">
 
                     <!-- Content Section -->
-                    <div class="w-full flex flex-col md:flex-row gap-[50px]">
+                    <div class="w-full flex flex-col md:flex-row gap-[30px]">
                         <div>
-                            <h2 class="font-bold !text-[38px] leading-[41.8px] tracking[-1px]" style="color: #d20f4b;">
-                                Who We Are</h2>
 
                             <p class="text-600 pr-3" style="color: #515151;">
-                                3D Plug is a pioneering company dedicated to unlocking the full potential of additive
-                                manufacturing in the 3D printing industry. Our journey began with a clear vision: to
-                                tackle the challenges that have historically limited the adoption of 3D printing and to
+                                 We are dedicated to transforming the way industries approach design, prototyping, and production. Our advanced technologies empower businesses and individuals alike, making innovative solutions accessible to everyone.
+                                We tackle the challenges that have historically limited the adoption of 3D printing and to
                                 reshape the manufacturing landscape for businesses across various sectors in Africa.
                                 <br />
                                 <br />
 
-                                We are committed to reducing dependence on global supply chains by offering secure and
+                                We are also committed to reducing dependence on global supply chains by offering secure and
                                 reliable local solutions. One of our core offerings is the production of laboratory
                                 consumables and disposables, with a particular focus on medical and pharmaceutical
                                 applications.
@@ -129,18 +144,19 @@
                         </div>
 
                         <div>
-                            <h3 class="font-bold !text-[24px]">Our Mission</h3>
-                            <p class="text-600 md:border-l md:px-3" style="color: #515151;">Our mission is clear and
-                                ambitious: to deliver customized, sustainable, and high-quality 3D printing models and
-                                prototypes.
-                                We empower businesses to optimize their processes, reduce production costs, enhance
-                                overall efficiency, and minimize their environmental impact.
+                            <h3 class="font-bold !text-[24px] md:!ml-13"></h3>
+                            <p class="text-600 md:border-l md:pl-13" style="color: #515151;">Explore our
+                                range of
+                                state-of-the-art 3D printing services tailored to meet the unique needs of various
+                                sectors, including Food & Beverage, Veterinary, Clinical, Environmental, Pharmaceutical,
+                                and Educational Laboratories. Whether you’re looking to streamline your production
+                                processes, create prototypes, or explore new product designs, our team of experts is
+                                here to support you every step of the way
                                 <br />
                                 <br />
-                                To utilize additive manufacturing to produce locally made, high-quality, and
-                                cost-effective laboratory consumables and disposables, reducing Africa's dependency on
-                                imports. We strive to enhance healthcare and research capabilities across the continent
-                                while promoting sustainable practices.
+                                Join us in revolutionizing the future of manufacturing with sustainable, efficient, and
+                                cost-effective 3D printing solutions across Africa. Discover how 3D Plug can help you
+                                unlock new possibilities and drive innovation in your industry today!
                             </p>
                         </div>
 
@@ -196,7 +212,7 @@
     </section>
 
     <!-- Trusted by partners -->
-    <section class="max-w-8xl mx-auto !pt-[45px] md:!pt-[96px] px-6 text-center">
+    <section class="max-w-8xl mx-auto !pt-[45px] md:!pt-[96px] px-6 text-center bg-white">
         <h2 class="text-black text-center text-[11.625px] font-medium tracking-[0.72px] uppercase mb-10 md:mb-[30px]">
             Trusted by partners
         </h2>
