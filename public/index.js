@@ -102,23 +102,105 @@ observer.observe(dropdown);
 
 
 // When the "Industries We Serve" dropdown is in view, animate it
-    document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
 const dropdown = document.getElementById('industry-dropdown');
-if (!dropdown) return;
-const observer = new IntersectionObserver(
-    (entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                dropdown.classList.remove('opacity-0', 'translate-y-10');
-                dropdown.classList.add('opacity-100', 'translate-y-0');
-                observer.unobserve(dropdown);
-            }
-        });
-    },
-    { threshold: 0.2 }
+    if (!dropdown) return;
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    dropdown.classList.remove('opacity-0', 'translate-y-10');
+                    dropdown.classList.add('opacity-100', 'translate-y-0');
+                    observer.unobserve(dropdown);
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+    observer.observe(dropdown);
+    }
 );
-observer.observe(dropdown);
-});
+
+
+// When the "Industries We Serve" dropdown is in view, animate it
+document.addEventListener("DOMContentLoaded", function () {
+const dropdown = document.getElementById('industryWeServe');
+    if (!dropdown) return;
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    dropdown.classList.remove('opacity-0', 'translate-y-10');
+                    dropdown.classList.add('opacity-100', 'translate-y-0');
+                    observer.unobserve(dropdown);
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+    observer.observe(dropdown);
+    }
+);
+
+// When "ourSolutions" is in view, animate it
+document.addEventListener("DOMContentLoaded", function () {
+const dropdown = document.getElementById('ourSolutions');
+    if (!dropdown) return;
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    dropdown.classList.remove('opacity-0', 'translate-y-10');
+                    dropdown.classList.add('opacity-100', 'translate-y-0');
+                    observer.unobserve(dropdown);
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+    observer.observe(dropdown);
+    }
+);
+
+// When "our mission" is in view, animate it
+document.addEventListener("DOMContentLoaded", function () {
+const dropdown = document.getElementById('our-mission');
+    if (!dropdown) return;
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    dropdown.classList.remove('opacity-0', 'translate-y-10');
+                    dropdown.classList.add('opacity-100', 'translate-y-0');
+                    observer.unobserve(dropdown);
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+    observer.observe(dropdown);
+    }
+);
+
+// When "Home Page" is in view, animate it
+document.addEventListener("DOMContentLoaded", function () {
+const dropdown = document.getElementById('homePage');
+    if (!dropdown) return;
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    dropdown.classList.remove('opacity-0', 'translate-y-10');
+                    dropdown.classList.add('opacity-100', 'translate-y-0');
+                    observer.unobserve(dropdown);
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+    observer.observe(dropdown);
+    }
+);
 
 
 
