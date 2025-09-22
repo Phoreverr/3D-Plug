@@ -155,10 +155,11 @@
         align-items: center;
         width: max-content; /* Ensures the container is wide enough */
         animation: slide 100s linear infinite;
+        margin-top: 50px;
     }
     
     .slideshow img {
-        width: 180px; /* Adjust width */
+        width: 90px; /* Adjust width */
         max-width: 20vw; /* Ensures responsiveness */
         margin: 0 40px; /* Adjust spacing */
     }
