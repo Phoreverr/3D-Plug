@@ -4,10 +4,18 @@ window.addEventListener("load", function () {
     const content = document.getElementById("content");
 
     // Hide loader after animation completes (2.5s)
-    setTimeout(() => {
-        loader.style.display = "none";
-        content.style.display = "block";
-    }, 1500);
+    if (loader) {
+        setTimeout(() => {
+            loader.style.display = "none";
+        }, 1500);
+    }
+
+    if (content) {
+        setTimeout(() => {
+            content.style.display = "block";
+        }, 1500);
+    }
+
 });
 
 // Simulate loader delay
@@ -15,20 +23,25 @@ setTimeout(() => {
     document.querySelectorAll('.slide-in').forEach(el => {
         el.classList.add('animate-in');
     });
-    document.querySelector('.delay').classList.add('animate-delay');
+
+    const delayEl = document.querySelector('.delay');
+if (delayEl) {
+    delayEl.classList.add('animate-delay');
+}
+
 }, 1500);
-
-
 
 
 // Wiggle the button every 2 seconds
 document.addEventListener("DOMContentLoaded", function () {
     const btn = document.querySelector('.wiggle-btn');
+if (btn) {
     setInterval(() => {
         btn.classList.remove('wiggle-btn');
         void btn.offsetWidth; // trigger reflow
         btn.classList.add('wiggle-btn');
     }, 2000);
+}
 });
 
 document.addEventListener("DOMContentLoaded", function () {
